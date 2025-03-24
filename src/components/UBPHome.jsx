@@ -5,7 +5,7 @@ import logo from "/UBPMadeEasy.webp";
 
 const UBPHome = () => {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-[#D72638] to-[#A71E2D] text-white flex items-center justify-center px-4 sm:px-6 py-8 sm:py-12">
+    <main className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white flex items-center justify-center px-4 sm:px-6 py-8 sm:py-12">
       <div className="w-full max-w-6xl mx-4">
         {/* Header Section */}
         <motion.header
@@ -47,7 +47,7 @@ const UBPHome = () => {
                 <div className="bg-[#FFD700] w-12 h-12 rounded-full flex items-center justify-center mb-4 mx-auto shadow-md">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6 text-[#D72638]"
+                    className="h-6 w-6 text-[#111827]"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -85,7 +85,7 @@ const UBPHome = () => {
             <motion.button
               whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(255, 215, 0, 0.4)" }}
               whileTap={{ scale: 0.98 }}
-              className="bg-gradient-to-r from-[#FFD700] to-[#FFEC8B] text-[#D72638] px-8 sm:px-12 py-3 sm:py-4 rounded-full text-lg sm:text-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group"
+              className="bg-gradient-to-r from-[#FFD700] to-[#FFEC8B] text-[#111827] px-8 sm:px-12 py-3 sm:py-4 rounded-full text-lg sm:text-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group"
               aria-label="Get Started with UBP Guide"
             >
               <span className="relative z-10">Get Started Now</span>
