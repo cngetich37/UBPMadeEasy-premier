@@ -52,11 +52,11 @@ const Contact = () => {
         <meta name="description" content="Share your feedback anonymously. Contact us for inquiries, suggestions, or support." />
       </Helmet>
 
-      <main className="flex flex-col justify-center items-center min-h-screen bg-[#D72638] p-6">
+      <main className="flex flex-col justify-center items-center min-h-screen bg-[#111827] p-6">
         <section className="w-full max-w-3xl bg-white p-8 rounded-2xl shadow-lg">
           <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <header className="text-center mb-6">
-              <h1 className="text-3xl font-bold text-[#D72638]">Give Feedback</h1>
+              <h1 className="text-3xl font-bold text-[#111827]">Give Feedback</h1>
               <p className="text-gray-600">Your opinion matters to us.</p>
             </header>
 
@@ -78,7 +78,7 @@ const Contact = () => {
 
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
-                <label htmlFor="name" className="block text-[#D72638] font-medium mb-2">
+                <label htmlFor="name" className="block text-[#111827] font-medium mb-2">
                   Name <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -87,13 +87,13 @@ const Contact = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D72638]"
+                  className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#111827]"
                 />
                 {errors.name && <div className="text-red-500 text-sm mt-1">{errors.name}</div>}
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-[#D72638] font-medium mb-2">
+                <label htmlFor="email" className="block text-[#111827] font-medium mb-2">
                   Email <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -102,13 +102,13 @@ const Contact = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D72638]"
+                  className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#111827]"
                 />
                 {errors.email && <div className="text-red-500 text-sm mt-1">{errors.email}</div>}
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-[#D72638] font-medium mb-2">
+                <label htmlFor="message" className="block text-[#111827] font-medium mb-2">
                   Message <span className="text-red-500">*</span>
                 </label>
                 <textarea
@@ -117,7 +117,7 @@ const Contact = () => {
                   rows="5"
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D72638]"
+                  className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#111827]"
                 />
                 {errors.message && <div className="text-red-500 text-sm mt-1">{errors.message}</div>}
               </div>
@@ -127,7 +127,7 @@ const Contact = () => {
                 disabled={isSubmitting}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-full py-3 bg-[#D72638] text-[#FFD700] font-semibold rounded-lg transition-all focus:outline-none focus:ring-4 focus:ring-[#FFD700]"
+                className="w-full py-3 bg-[#111827] text-[#FFD700] font-semibold rounded-lg transition-all focus:outline-none focus:ring-4 focus:ring-[#FFD700]"
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
               </motion.button>

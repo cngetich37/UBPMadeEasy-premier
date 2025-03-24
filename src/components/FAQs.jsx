@@ -49,7 +49,7 @@ const FAQs = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-[#D72638] text-white p-6">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white p-6">
       {/* SEO Metadata */}
       <Helmet>
         <title>FAQs - Unified Business Permits & MPESA Outlets</title>
@@ -80,24 +80,24 @@ const FAQs = () => {
         {faqs.map((faq, index) => (
           <motion.div
             key={index}
-            className="bg-white text-[#D72638] rounded-lg shadow-lg overflow-hidden border border-gray-300 hover:shadow-xl transition-all duration-300"
+            className="bg-white text-[#111827] rounded-lg shadow-lg overflow-hidden border border-gray-300 hover:shadow-xl transition-all duration-300"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: index * 0.1 }}
           >
             <button
-              className="w-full flex justify-between items-center p-6 text-left text-xl font-bold focus:outline-none bg-[#FFD700] text-[#D72638] transition-all duration-300"
+              className="w-full flex justify-between items-center p-6 text-left text-xl font-bold focus:outline-none bg-[#FFD700] text-[#111827] transition-all duration-300"
               onClick={() => toggleFAQ(index)}
             >
               {faq.question}
               {openIndex === index ? (
-                <ChevronUp className="text-[#D72638]" />
+                <ChevronUp className="text-[#111827]" />
               ) : (
-                <ChevronDown className="text-[#D72638]" />
+                <ChevronDown className="text-[#111827]" />
               )}
             </button>
             <motion.div
-              className={`overflow-hidden transition-all duration-500 ease-in-out bg-gray-100 text-[#D72638] ${
+              className={`overflow-hidden transition-all duration-500 ease-in-out bg-gray-100 text-[#111827] ${
                 openIndex === index ? "max-h-screen p-6" : "max-h-0 p-0"
               }`}
             >

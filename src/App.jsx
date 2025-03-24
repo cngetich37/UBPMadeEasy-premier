@@ -4,9 +4,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import UBPHome from "./components/UBPHome";
 import FinanceAct from "./components/FinanceAct";
-import SearchUBP from "./components/SearchUBP";
 import AdvertFormat from "./components/AdvertFormat";
-import SearchAdvert from "./components/SearchAdvert";
 import Guide from "./components/Guide";
 import FAQS from "./components/FAQs";
 import ApplicationProcess from "./components/ApplicationProcess";
@@ -14,6 +12,7 @@ import Contact from "./components/Contact";
 import NaicsCode from "./components/NaicsCode";
 import TermsAndConditions from "./components/TermsAndConditions";
 import ProtectedRoute from "./components/ProtectedRoute";
+import CombinedSearch from "./components/CombinedSearch";
 
 const App = () => {
   return (
@@ -29,9 +28,8 @@ const App = () => {
           <Route path="/financeact" element={<FinanceAct />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/faqs" element={<FAQS />} />
-          <Route path="/ubp" element={<SearchUBP />} />
+          <Route path="/ubp" element={<CombinedSearch/>} />
           <Route path="/advert" element={<AdvertFormat />} />
-          <Route path="/advertsearch" element={<SearchAdvert />} />
           <Route path="/guide" element={<Guide />} />
           <Route path="/app" element={<ApplicationProcess />} />
           <Route path="/naics" element={<NaicsCode />} />

@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 const AdvertFormat = () => {
@@ -61,7 +60,7 @@ const AdvertFormat = () => {
   };
 
   return (
-    <main className="bg-[#D72638] min-h-screen flex flex-col items-center p-4">
+    <main className="bg-[#111827] min-h-screen flex flex-col items-center p-4">
       <Helmet>
         <title>Advert Formats - Browse advert formats</title>
         <meta
@@ -73,7 +72,7 @@ const AdvertFormat = () => {
 
       <section className="bg-white w-full md:w-3/4 lg:w-2/3 p-6 rounded-xl shadow-lg min-h-screen">
         <header>
-          <h1 className="text-3xl font-bold text-[#D72638] mb-4 text-center">
+          <h1 className="text-3xl font-bold text-[#111827] mb-4 text-center">
             Advert (Small Formats)
           </h1>
         </header>
@@ -85,7 +84,7 @@ const AdvertFormat = () => {
             placeholder="Search advert type..."
             value={searchTerm}
             onChange={handleSearch}
-            className="w-full px-4 py-2 border border-[#D72638] rounded-md focus:outline-none focus:ring-2 focus:ring-[#FFD700]"
+            className="w-full px-4 py-2 border border-[#111827] rounded-md focus:outline-none focus:ring-2 focus:ring-[#FFD700]"
           />
         </div>
 
@@ -102,23 +101,15 @@ const AdvertFormat = () => {
                     alt={item.imageDescription || "Advert Image"}
                     className="w-full h-48 object-cover cursor-pointer hover:scale-105 transition-transform duration-300"
                   />
-                  <figcaption className="absolute bottom-0 left-0 w-full bg-[#FFD700] bg-opacity-80 text-[#D72638] p-2 text-center font-semibold truncate">
-                    <Link
-                      to={{
-                        pathname: "/advertsearch",
-                        search: `?advert=${encodeURIComponent(
-                          item.imageDescription
-                        )}`,
-                      }}
-                      className="hover:underline"
-                    >
-                      {item.imageDescription}
-                    </Link>
+                  <figcaption className="absolute bottom-0 left-0 w-full bg-[#FFD700] bg-opacity-80 text-[#111827] p-2 text-center font-semibold truncate">
+                    {item.imageDescription}
                   </figcaption>
                 </figure>
               ))
             ) : (
-              <p className="text-center text-gray-500">No matching adverts found.</p>
+              <p className="text-center text-gray-500">
+                No matching adverts found.
+              </p>
             )}
           </div>
         </div>
