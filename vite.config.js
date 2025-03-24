@@ -14,8 +14,8 @@ export default defineConfig({
         short_name: 'UBPMadeEasy',
         start_url: '/',
         display: 'standalone',
-        background_color: '#065A38',
-        theme_color: '#065A38',
+        background_color: '#D72638',
+        theme_color: '#D72638',
         icons: [
           {
             src: '/pwa-64x64.png',
