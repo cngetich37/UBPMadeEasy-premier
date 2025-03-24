@@ -17,5 +17,5 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_UBPMADEEASY_FF871 }}
-          projectId: ubpmadeeasy-ff871
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_UBPMADEEASYPREMIER }}
+          projectId: ubpmadeeasypremier
