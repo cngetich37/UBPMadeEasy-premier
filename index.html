@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon & Theme Color -->
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="theme-color" content="#065A38" />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png" sizes="180x180" />
+    <link rel="mask-icon" href="/maskable-icon-512x512.png" color="#065A38" />
+
+    <!-- Preload Important Assets -->
+    <link rel="preload" href="/styles.css" as="style" />
+    <link rel="preload" href="/src/main.jsx" as="script" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/styles.css" />
+
+    <!-- Schema Markup for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "UBP Made Easy",
+      "url": "https://ubpeasy.cnetechafrica.org",
+      "logo": "https://ubpeasy.cnetechafrica.org/pwa-512x512.png",
+      "description": "UBP Made Easy helps businesses in Nairobi search activities before submitting a Unified Business Permit (UBP) application via NairobiPay.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web"
+    }
+    </script>
+  </head>
+  <body>
+    <!-- React Root Element -->
+    <div id="root"></div>
+
+    <!-- React Entry Script -->
+    <script type="module" src="/src/main.jsx" defer></script>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+[
+    {
+        "id": "AboveCanopy",
+        "imageName": "AboveCanopy",
+        "imageDescription": "Above Canopy",
+        "imageUrl": "/images/AboveCanopy.jpg"
+    },
+    {
+        "id": "Billboard",
+        "imageName": "Billboard",
+        "imageDescription": "Billboard",
+        "imageUrl": "/images/Billboard.jpeg"
+    },
+    {
+        "id": "Canvas",
+        "imageName": "Canvas",
+        "imageDescription": "Canvas",
+        "imageUrl": "/images/Canvas.jpg"
+    },
+    {
+        "id": "CorporateFlags",
+        "imageName": "CorporateFlags",
+        "imageDescription": "Corporate Flags",
+        "imageUrl": "/images/CorporateFlags.jpeg"
+    },
+    {
+        "id": "DirectionalSigns",
+        "imageName": "DirectionalSigns",
+        "imageDescription": "Directional Signs",
+        "imageUrl": "/images/DirectionalSigns.jpeg"
+    },
+    {
+        "id": "FixedOnCanopy",
+        "imageName": "FixedOnCanopy",
+        "imageDescription": "Fixed On Canopy",
+        "imageUrl": "/images/FixedOnCanopy.jpg"
+    },
+    {
+        "id": "FixedOnWall",
+        "imageName": "FixedOnWall",
+        "imageDescription": "Fixed On Wall",
+        "imageUrl": "/images/FixedOnWall.jpeg"
+    },
+    {
+        "id": "SittingOnCanopy",
+        "imageName": "SittingOnCanopy",
+        "imageDescription": "Sitting On Canopy",
+        "imageUrl": "/images/SittingOnCanopy.jpg"
+    },
+    {
+        "id": "Skysign",
+        "imageName": "Skysign",
+        "imageDescription": "Skysign",
+        "imageUrl": "/images/Skysign.jpeg"
+    },
+    {
+        "id": "Call In Adverts",
+        "imageName": "Call In Adverts",
+        "imageDescription": "Call In Adverts",
+        "imageUrl": "/images/Call in advert.jpg"
+    },
+    {
+        "id": "UnderCanopy",
+        "imageName": "UnderCanopy",
+        "imageDescription": "Under Canopy",
+        "imageUrl": "/images/UnderCanopy.jpeg"
+    },
+    {
+        "id": "Wallpainting",
+        "imageName": "Wallpainting",
+        "imageDescription": "Wallpainting",
+        "imageUrl": "/images/Wallpainting.jpg"
+    },
+    {
+        "id": "WindowBranding",
+        "imageName": "WindowBranding-WallBranding",
+        "imageDescription": "Window Branding",
+        "imageUrl": "/images/WindowBranding-WallBranding.jpeg"
+    },
+    {
+        "id": "WallBranding",
+        "imageName": "WindowBranding-WallBranding",
+        "imageDescription": "Wall Branding",
+        "imageUrl": "/images/WindowBranding-WallBranding.jpeg"
+    }
+]
