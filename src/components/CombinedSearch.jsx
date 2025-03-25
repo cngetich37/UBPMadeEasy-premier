@@ -59,12 +59,12 @@ function CombinedSearch() {
     control: (provided, state) => ({
       ...provided,
       backgroundColor: state.isFocused ? "#F4F4F4" : "#FFFFFF",
-      borderColor: state.isFocused ? "#111827" : "#FFD700",
+      borderColor: state.isFocused ? "#064E3B" : "#FFD700",
       boxShadow: state.isFocused
         ? "0 0 0 0.2rem rgba(6, 90, 56, 0.25)"
         : "none",
       "&:hover": {
-        borderColor: state.isFocused ? "#111827" : "#FFD700",
+        borderColor: state.isFocused ? "#064E3B" : "#FFD700",
       },
     }),
     singleValue: (provided) => ({
@@ -73,17 +73,17 @@ function CombinedSearch() {
     }),
     option: (provided, state) => ({
       ...provided,
-      backgroundColor: state.isFocused ? "#111827" : "#FFFFFF",
+      backgroundColor: state.isFocused ? "#064E3B" : "#FFFFFF",
       color: state.isFocused ? "#FFD700" : "#495057",
       "&:hover": {
-        backgroundColor: state.isFocused ? "#111827" : "#F4F4F4",
+        backgroundColor: state.isFocused ? "#064E3B" : "#F4F4F4",
       },
     }),
     dropdownIndicator: (provided, state) => ({
       ...provided,
-      color: state.isFocused ? "#111827" : "#ADB5BD",
+      color: state.isFocused ? "#064E3B" : "#ADB5BD",
       "&:hover": {
-        color: state.isFocused ? "#111827" : "#495057",
+        color: state.isFocused ? "#064E3B" : "#495057",
       },
     }),
   };
@@ -698,7 +698,7 @@ function CombinedSearch() {
     const pageWidth = pdf.internal.pageSize.getWidth();
     const rectHeight = 40;
 
-    pdf.setFillColor("#111827");
+    pdf.setFillColor("#064E3B");
     pdf.rect(0, titleY - rectHeight / 2, pageWidth, rectHeight, "F");
 
     pdf.setTextColor("#FFD700");
@@ -732,13 +732,13 @@ function CombinedSearch() {
       body: tableRows,
       theme: "striped",
       styles: {
-        textColor: "#111827",
+        textColor: "#064E3B",
         font: "Times",
         fontSize: 12,
       },
       headStyles: {
         fillColor: "#FFFFFF",
-        textColor: "#111827",
+        textColor: "#064E3B",
         fontStyle: "bold",
         fontSize: 14,
         halign: "center",
@@ -756,7 +756,7 @@ function CombinedSearch() {
 
     pdf.setFont("Times", "bold");
     pdf.setFontSize(16);
-    pdf.setTextColor("#111827");
+    pdf.setTextColor("#064E3B");
     pdf.setFillColor("#FFFFFF");
 
     currentY += 20;
@@ -803,13 +803,13 @@ function CombinedSearch() {
       body: tableRowsFinance,
       theme: "striped",
       styles: {
-        textColor: "#111827",
+        textColor: "#064E3B",
         fillColor: "#FFFFFF",
         font: "Arial",
         fontSize: 10,
       },
       headStyles: {
-        fillColor: "#111827",
+        fillColor: "#064E3B",
         textColor: "#FFD700",
         fontSize: 12,
       },
@@ -902,7 +902,7 @@ function CombinedSearch() {
       "F"
     );
 
-    doc.setTextColor("#111827");
+    doc.setTextColor("#064E3B");
     doc.text("UBPMadeEasy", leftMargin, topMargin);
 
     let currentY = topMargin + titleFontSize + spacing;
@@ -934,7 +934,7 @@ function CombinedSearch() {
       body: tableRows,
       theme: "striped",
       styles: {
-        textColor: "#111827",
+        textColor: "#064E3B",
         font: "Arial",
         fontStyle: "normal",
         fontSize: 10,
@@ -978,19 +978,19 @@ function CombinedSearch() {
         />
         <meta name="author" content="Collins Ngetich" />
       </Helmet>
-      <main className="flex flex-col md:flex-row justify-center items-center min-h-screen bg-gradient-to-b from-black via-gray-900 to-black pt-4 pb-4 pl-2">
+      <main className="flex flex-col md:flex-row justify-center items-center min-h-screen bg-gradient-to-b from-emerald-950 via-emerald-900 to-emerald-950 pt-4 pb-4 pl-2">
         <div className="flex flex-col justify-center items-center md:w-full w-full max-w-screen-5xl mr-auto ml-auto overflow-x-auto">
           <div
             id="capture"
-            className="bg-gray-950  border-4  border-yellow-500 shadow-lg shadow-yellow-500/30 md:mb-2 md:w-3/4 w-11/12 md:h-screen h-3/4 md:mt-2 md:ml-2 p-4 rounded-md overflow-y-auto mb-16"
+            className="bg-white  border-4  border-yellow-500 shadow-lg shadow-yellow-500/30 md:mb-2 md:w-3/4 w-11/12 md:h-screen h-3/4 md:mt-2 md:ml-2 p-4 rounded-md overflow-y-auto mb-16"
           >
             {/* Tab Navigation */}
             <div className="flex border-b border-[#FFD700] mb-6">
               <button
                 className={`py-2 px-4 font-medium text-lg ${
                   activeTab === "business"
-                    ? "text-yellow-400 border-b-2 border-GRAY-900"
-                    : "text-gray-500 hover:text-yellow-400"
+                    ? "text-emerald-900 border-b-2 border-GRAY-900"
+                    : "text-gray-500 hover:text-emerald-900"
                 }`}
                 onClick={() => setActiveTab("business")}
               >
@@ -999,8 +999,8 @@ function CombinedSearch() {
               <button
                 className={`py-2 px-4 font-medium text-lg ${
                   activeTab === "advertisement"
-                    ? "text-yellow-400 border-b-2 border-GRAY-900"
-                    : "text-gray-500 hover:text-yellow-400"
+                    ? "text-emerald-900 border-b-2 border-GRAY-900"
+                    : "text-gray-500 hover:text-emerald-900"
                 }`}
                 onClick={() => setActiveTab("advertisement")}
               >
@@ -1012,7 +1012,7 @@ function CombinedSearch() {
             {activeTab === "business" && (
               <>
                 <header>
-                  <h1 className="text-2xl font-semibold text-center text-yellow-400 mb-4">
+                  <h1 className="text-2xl font-semibold text-center text-emerald-900 mb-4">
                     Business Activity Information
                   </h1>
                 </header>
@@ -1039,7 +1039,7 @@ function CombinedSearch() {
                           className="loading loading-spinner bg-[#FFD700] text-warning loading-md"
                           role="status"
                         />
-                        <span className="hidden md:block text-yellow-400 font-bold ml-1">
+                        <span className="hidden md:block text-emerald-900 font-bold ml-1">
                           Loading...
                         </span>
                       </div>
@@ -1048,7 +1048,7 @@ function CombinedSearch() {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="flex flex-col">
-                    <label className="text-md text-yellow-400 font-medium">
+                    <label className="text-md text-emerald-900 font-medium">
                       Industry
                     </label>
                     <input
@@ -1058,13 +1058,13 @@ function CombinedSearch() {
                       className="input input-bordered bg-white text-black p-2 rounded-md border-[#FFD700] focus:border-GRAY-900 text-sm"
                     />
                     {industry !== "" && industryMessage && (
-                      <p className="text-sm text-yellow-400">
+                      <p className="text-sm text-emerald-900">
                         {industryMessage}
                       </p>
                     )}
                   </div>
                   <div className="flex flex-col">
-                    <label className="text-md text-yellow-400 font-medium">
+                    <label className="text-md text-emerald-900 font-medium">
                       Business Category
                     </label>
                     <input
@@ -1074,13 +1074,13 @@ function CombinedSearch() {
                       className="input input-bordered bg-white text-black p-2 rounded-md border-[#FFD700] focus:border-GRAY-900 text-sm"
                     />
                     {businessCategory !== "" && businessCategoryMessage && (
-                      <p className="text-sm text-yellow-400">
+                      <p className="text-sm text-emerald-900">
                         {businessCategoryMessage}
                       </p>
                     )}
                   </div>
                   <div className="flex flex-col">
-                    <label className="text-md text-yellow-400 font-medium">
+                    <label className="text-md text-emerald-900 font-medium">
                       Business Sub category
                     </label>
                     <input
@@ -1091,13 +1091,13 @@ function CombinedSearch() {
                     />
                     {businessSubCategory !== "" &&
                       businessSubCategoryMessage && (
-                        <p className="text-sm text-yellow-400">
+                        <p className="text-sm text-emerald-900">
                           {businessSubCategoryMessage}
                         </p>
                       )}
                   </div>
                   <div className="flex flex-col">
-                    <label className="text-md text-yellow-400 font-medium">
+                    <label className="text-md text-emerald-900 font-medium">
                       Business Activity
                     </label>
                     <input
@@ -1107,7 +1107,7 @@ function CombinedSearch() {
                       className="input input-bordered bg-white text-black p-2 rounded-md border-[#FFD700] focus:border-GRAY-900 text-sm"
                     />
                     {businessActivity !== "" && businessActivityMessage && (
-                      <p className="text-sm text-yellow-400">
+                      <p className="text-sm text-emerald-900">
                         {businessActivityMessage}
                       </p>
                     )}
@@ -1118,7 +1118,7 @@ function CombinedSearch() {
                   <div className="mt-2">
                     <label
                       htmlFor="businessDescriptionFilter"
-                      className="block text-sm font-medium text-yellow-400 mb-2"
+                      className="block text-sm font-medium text-emerald-900 mb-2"
                     >
                       {labelText
                         .replace(/Hospitals/g, "Beds")
@@ -1133,7 +1133,7 @@ function CombinedSearch() {
                     />
                   </div>
                   <table className="table-auto max-w-full divide-y divide-GRAY-900">
-                    <thead className="bg-gray-900">
+                    <thead className="bg-emerald-900 text-[#FFD700]">
                       <tr>
                         {[
                           "Business Description",
@@ -1224,7 +1224,7 @@ function CombinedSearch() {
                 <div className="flex justify-end mt-4">
                   <button
                     onClick={() => shareAsPDF(tableData)}
-                    className="btn bg-gray-900 mb-8  text-[#FFD700] font-semibold py-2 px-4 rounded-md"
+                    className="btn bg-emerald-900 mb-8  text-[#FFD700] font-semibold py-2 px-4 rounded-md"
                   >
                     Download PDF
                   </button>
@@ -1236,7 +1236,7 @@ function CombinedSearch() {
             {activeTab === "advertisement" && (
               <>
                 <header>
-                  <h1 className="text-2xl font-semibold text-center text-yellow-400 mb-4">
+                  <h1 className="text-2xl font-semibold text-center text-emerald-900 mb-4">
                     Advert Small Formats
                   </h1>
                 </header>
@@ -1262,7 +1262,7 @@ function CombinedSearch() {
                           className="loading loading-spinner bg-[#FFD700] text-warning loading-md"
                           role="status"
                         />
-                        <span className="hidden md:block text-yellow-400 font-bold ml-1 ">
+                        <span className="hidden md:block text-emerald-900 font-bold ml-1 ">
                           Loading...
                         </span>
                       </div>
@@ -1271,7 +1271,7 @@ function CombinedSearch() {
                 </div>
                 <form className="grid grid-cols-1 md:grid-cols-2 gap-4 md:mb-0 lg:mb-0 mb-8">
                   <div className="flex flex-col">
-                    <label className="text-md text-yellow-400 font-medium">
+                    <label className="text-md text-emerald-900 font-medium">
                       Advertisement Category
                     </label>
                     <input
@@ -1286,7 +1286,7 @@ function CombinedSearch() {
                       applicationFee === 0 ? "hidden" : ""
                     }`}
                   >
-                    <label className="text-md text-yellow-400 font-medium">
+                    <label className="text-md text-emerald-900 font-medium">
                       Application Fee(New Applicant)
                     </label>
                     <input
@@ -1305,7 +1305,7 @@ function CombinedSearch() {
                     />
                   </div>
                   <div className="flex flex-col">
-                    <label className="text-md text-yellow-400 font-medium">
+                    <label className="text-md text-emerald-900 font-medium">
                       Length(m)
                     </label>
                     <div className="relative">
@@ -1337,7 +1337,7 @@ function CombinedSearch() {
                       <div className="absolute top-2 right-2 bottom-2 flex flex-col">
                         <div className="flex justify-center w-full">
                           <kbd
-                            className="px-1 py-0 rounded-md cursor-pointer text-xs text-[#FFD700] bg-gray-900"
+                            className="px-1 py-0 rounded-md cursor-pointer text-xs text-[#FFD700] bg-emerald-900"
                             onClick={() =>
                               setLength((prevLength) => prevLength + 1)
                             }
@@ -1347,7 +1347,7 @@ function CombinedSearch() {
                         </div>
                         <div className="flex justify-center w-full">
                           <kbd
-                            className="px-1 py-0 rounded-md cursor-pointer text-xs text-[#FFD700] bg-gray-900"
+                            className="px-1 py-0 rounded-md cursor-pointer text-xs text-[#FFD700] bg-emerald-900"
                             onClick={() => {
                               if (length > 0) {
                                 setLength((prevLength) => prevLength - 1);
@@ -1361,7 +1361,7 @@ function CombinedSearch() {
                     </div>
                   </div>
                   <div className="flex flex-col">
-                    <label className="text-md text-yellow-400 font-medium">
+                    <label className="text-md text-emerald-900 font-medium">
                       Width(m)
                     </label>
                     <div className="relative">
@@ -1393,7 +1393,7 @@ function CombinedSearch() {
                       <div className="absolute top-2 right-2 bottom-2 flex flex-col">
                         <div className="flex justify-center w-full mt-0">
                           <kbd
-                            className="px-1 py-0 rounded-md cursor-pointer text-xs text-[#FFD700] bg-gray-900"
+                            className="px-1 py-0 rounded-md cursor-pointer text-xs text-[#FFD700] bg-emerald-900"
                             onClick={() =>
                               setWidth((prevWidth) => prevWidth + 1)
                             }
@@ -1403,7 +1403,7 @@ function CombinedSearch() {
                         </div>
                         <div className="flex justify-center w-full">
                           <kbd
-                            className="px-1 py-0 rounded-md cursor-pointer text-xs text-[#FFD700] bg-gray-900"
+                            className="px-1 py-0 rounded-md cursor-pointer text-xs text-[#FFD700] bg-emerald-900"
                             onClick={() => {
                               if (width > 0) {
                                 setWidth((prevWidth) => prevWidth - 1);
@@ -1423,7 +1423,7 @@ function CombinedSearch() {
                           firstSquareMetres === 0 ? "hidden" : ""
                         }`}
                       >
-                        <label className="text-md text-yellow-400 font-medium">
+                        <label className="text-md text-emerald-900 font-medium">
                           first m²
                         </label>
                         <input
@@ -1449,7 +1449,7 @@ function CombinedSearch() {
                           extraSquareMetres === 0 ? "hidden" : ""
                         }`}
                       >
-                        <label className="text-md text-yellow-400 font-medium">
+                        <label className="text-md text-emerald-900 font-medium">
                           Each Extra m²
                         </label>
                         <input
@@ -1475,7 +1475,7 @@ function CombinedSearch() {
                           firstThreeMetres === 0 ? "hidden" : ""
                         }`}
                       >
-                        <label className="text-md text-yellow-400 font-medium">
+                        <label className="text-md text-emerald-900 font-medium">
                           first 3m²
                         </label>
                         <input
@@ -1501,7 +1501,7 @@ function CombinedSearch() {
                           firstTenSquareMetres === 0 ? "hidden" : ""
                         }`}
                       >
-                        <label className="text-md text-yellow-400 font-medium">
+                        <label className="text-md text-emerald-900 font-medium">
                           first 10m²
                         </label>
                         <input
@@ -1525,7 +1525,7 @@ function CombinedSearch() {
                     </>
                   )}
                   <div className="flex flex-col">
-                    <label className="text-md text-yellow-400 font-medium">
+                    <label className="text-md text-emerald-900 font-medium">
                       Licence Fee(Renewal)
                     </label>
                     <input
@@ -1544,7 +1544,7 @@ function CombinedSearch() {
                     />
                   </div>
                   <div className="flex flex-col">
-                    <label className="text-md text-yellow-400 font-medium">
+                    <label className="text-md text-emerald-900 font-medium">
                       Licence Fee(New Applicant)
                     </label>
                     <input
@@ -1563,7 +1563,7 @@ function CombinedSearch() {
                     />
                   </div>
                   <div className="hidden">
-                    <label className="text-md text-yellow-400 font-medium">
+                    <label className="text-md text-emerald-900 font-medium">
                       Per Year, Per Each
                     </label>
                     <input
@@ -1574,7 +1574,7 @@ function CombinedSearch() {
                     />
                   </div>
                 </form>
-                <div className="text-yellow-400 mt-2 sm:mt-4 lg:mt-6 max-w-1/2 mx-auto">
+                <div className="text-emerald-900 mt-2 sm:mt-4 lg:mt-6 max-w-1/2 mx-auto">
                   <span className="font-bold">Important Note:</span> If the{" "}
                   <span className="font-semibold">length</span> and{" "}
                   <span className="font-semibold">width</span> do not change
@@ -1588,7 +1588,7 @@ function CombinedSearch() {
 
                 <div className="flex flex-row justify-end">
                   <button
-                    className="btn btn-md bg-gray-900 text-[#FFD700] rounded-md font-medium"
+                    className="btn btn-md bg-emerald-900 text-[#FFD700] rounded-md font-medium"
                     onClick={generatePDF}
                   >
                     Download PDF
@@ -1603,17 +1603,17 @@ function CombinedSearch() {
                 <div className="bg-white w-11/12 max-w-lg rounded-md shadow-lg p-6 relative">
                   <button
                     onClick={closeModal}
-                    className="absolute top-4 right-4 text-yellow-400 font-bold text-xl"
+                    className="absolute top-4 right-4 text-emerald-900 font-bold text-xl"
                   >
                     ✕
                   </button>
-                  <h2 className="text-yellow-400 font-bold text-2xl mb-4">
+                  <h2 className="text-emerald-900 font-bold text-2xl mb-4">
                     Missing Information
                   </h2>
                   <p className="text-lg text-red-500">{uploadMessage}</p>
                   <button
                     onClick={closeModal}
-                    className="mt-4 px-4 py-2 bg-gray-900 text-[#FFD700] rounded-md"
+                    className="mt-4 px-4 py-2 bg-emerald-900 text-[#FFD700] rounded-md"
                   >
                     Close
                   </button>

@@ -43,7 +43,6 @@ const Navbar = () => {
     { href: "/financeact", icon: <ImBooks />, label: "Finance Act" },
     { href: "/contact", icon: <FaEnvelope />, label: "Contact Us" },
     { href: "/faqs", icon: <FaQuestionCircle />, label: "FAQ" },
-    
   ];
 
   return (
@@ -58,7 +57,7 @@ const Navbar = () => {
           {location.pathname !== "/" && location.pathname !== "/terms" && (
             <button
               onClick={toggleDrawer}
-              className="text-3xl text-[#111827]"
+              className="text-3xl text-emerald-900"
               aria-label="Toggle menu"
               aria-expanded={isOpen}
             >
@@ -73,9 +72,9 @@ const Navbar = () => {
               loading="lazy"
             />
             <span className="font-bold text-xl ml-2">
-              <span className="text-[#111827]">UBP</span>
-              <span className="text-[#111827]">Made</span>
-              <span className="text-[#111827]">Easy</span>
+              <span className="text-emerald-900">UBP</span>
+              <span className="text-emerald-900">Made</span>
+              <span className="text-emerald-900">Easy</span>
             </span>
           </Link>
         </div>
@@ -96,22 +95,22 @@ const Navbar = () => {
           <div className="flex flex-row items-center">
             <Link to="/" title="Go to Home">
               <img
-                className="w-10 h-10 rounded-full border-2 border-[#111827]"
+                className="w-10 h-10 rounded-full border-2 border-emerald-950 shadow-sm"
                 src={customPic}
                 alt="UBPMadeEasy Sidebar Logo"
               />
             </Link>
             <Link to="/" title="Go to Home">
               <span className="font-bold text-lg ml-1">
-                <span className="text-[#111827]">UBP</span>
-                <span className="text-[#111827]">Made</span>
-                <span className="text-[#111827]">Easy</span>
+                <span className="text-emerald-900">UBP</span>
+                <span className="text-emerald-900">Made</span>
+                <span className="text-emerald-900">Easy</span>
               </span>
             </Link>
           </div>
           <button
             onClick={toggleDrawer}
-            className="text-2xl text-[#111827]"
+            className="text-2xl text-emerald-900"
             aria-label="Close menu"
           >
             <IoMdClose />
@@ -124,7 +123,7 @@ const Navbar = () => {
             <li key={index}>
               <Link
                 to={item.href}
-                className="flex items-center gap-4 text-[#111827] p-3 rounded-lg cursor-pointer shadow-md hover:bg-[#FBCC1A] transition duration-300"
+                className="flex items-center gap-4 text-emerald-900 p-3 rounded-lg cursor-pointer shadow-md hover:bg-[#FBCC1A] transition duration-300"
                 title={item.label}
               >
                 <span className="text-2xl">{item.icon}</span>
