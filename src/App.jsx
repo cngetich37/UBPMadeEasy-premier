@@ -22,13 +22,12 @@ const App = () => {
         {/* Public Routes */}
         <Route path="/" element={<UBPHome />} />
         <Route path="/terms" element={<TermsAndConditions />} />
-
         {/* Protected Routes */}
         <Route element={<ProtectedRoute />}>
           <Route path="/financeact" element={<FinanceAct />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/faqs" element={<FAQS />} />
-          <Route path="/ubp" element={<CombinedSearch/>} />
+          <Route path="/ubp" element={<CombinedSearch />} />
           <Route path="/advert" element={<AdvertFormat />} />
           <Route path="/guide" element={<Guide />} />
           <Route path="/app" element={<ApplicationProcess />} />
