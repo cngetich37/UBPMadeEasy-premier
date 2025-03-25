@@ -38,11 +38,12 @@ const Navbar = () => {
 
   const menuItems = [
     { href: "/guide", icon: <FaListAlt />, label: "User Guide" },
+    { href: "/app", icon: <FaMagic />, label: "UBP Process" },
     { href: "/ubp", icon: <LuSearch />, label: "Search UBP" },
     { href: "/advert", icon: <LiaSignSolid />, label: "Advert Formats" },
     { href: "/financeact", icon: <ImBooks />, label: "Finance Act" },
     { href: "/contact", icon: <FaEnvelope />, label: "Contact Us" },
-    { href: "/faqs", icon: <FaQuestionCircle />, label: "FAQ" },
+    { href: "/faqs", icon: <FaQuestionCircle />, label: "FAQ" }
   ];
 
   return (

@@ -3,9 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      primary: "#FBCC1A",
+      primary: "#EAB308",
 
-      secondary: "#065A38",
+      secondary: "#064E3B",
 
       accent: "#007200",
 
@@ -15,7 +15,7 @@ export default {
 
       info: "#00caff",
 
-      success: "#065A38",
+      success: "#064E3B",
 
       warning: "#f94e00",
 
@@ -26,8 +26,8 @@ export default {
     themes: [
       {
         mytheme: {
-          "primary": "#065A38", // Change step-primary color
-          "secondary": "#FBCC1A",
+          "primary": "#064E3B", // Change step-primary color
+          "secondary": "#EAB308",
           "accent": "#757575",
           // Other colors...
         },

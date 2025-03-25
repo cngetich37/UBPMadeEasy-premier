@@ -13,7 +13,7 @@ const steps = [
 
 const pages = [
   <div className="p-6 bg-gray-50 rounded-lg shadow-md">
-    <h1 className="text-2xl font-bold text-[#065A38] mb-4">
+    <h1 className="text-2xl font-bold text-emerald-900 mb-4">
       Application Details
     </h1>
     <ul className="list-disc list-inside space-y-3 text-gray-700">
@@ -39,7 +39,7 @@ const pages = [
     </ul>
   </div>,
   <div className="p-6 bg-gray-50 rounded-lg shadow-md">
-    <h1 className="text-2xl font-bold text-[#065A38] mb-4">
+    <h1 className="text-2xl font-bold text-emerald-900 mb-4">
       Business Identity
     </h1>
     <ul className="list-disc list-inside space-y-3 text-gray-700">
@@ -48,7 +48,7 @@ const pages = [
         and <strong>Branch Name</strong>.
       </li>
     </ul>
-    <h1 className="text-2xl font-bold text-[#065A38] mb-4 mt-6">
+    <h1 className="text-2xl font-bold text-emerald-900 mb-4 mt-6">
       Business Location
     </h1>
     <ul className="list-disc list-inside space-y-3 text-gray-700">
@@ -66,7 +66,7 @@ const pages = [
     </ul>
   </div>,
   <div className="p-6 bg-gray-50 rounded-lg shadow-md">
-    <h1 className="text-2xl font-bold text-[#065A38] mb-4">
+    <h1 className="text-2xl font-bold text-emerald-900 mb-4">
       Business Activity
     </h1>
     <ul className="list-disc list-inside space-y-3 text-gray-700">
@@ -78,7 +78,7 @@ const pages = [
       </li>
       <li>If applicable, add another business activity.</li>
     </ul>
-    <h1 className="text-2xl font-bold text-[#065A38] mb-4 mt-6">
+    <h1 className="text-2xl font-bold text-emerald-900 mb-4 mt-6">
       Other Services
     </h1>
     <ul className="list-disc list-inside space-y-3 text-gray-700">
@@ -108,7 +108,7 @@ const pages = [
     </ul>
   </div>,
   <div className="p-6 bg-gray-50 rounded-lg shadow-md">
-    <h1 className="text-2xl font-bold text-[#065A38] mb-4">
+    <h1 className="text-2xl font-bold text-emerald-900 mb-4">
       Business Contacts
     </h1>
     <ul className="list-disc list-inside space-y-3 text-gray-700">
@@ -119,7 +119,7 @@ const pages = [
         <li>Postal Address & Postal Code</li>
       </ul>
     </ul>
-    <h1 className="text-2xl font-bold text-[#065A38] mb-4 mt-6">
+    <h1 className="text-2xl font-bold text-emerald-900 mb-4 mt-6">
       Contact Person
     </h1>
     <ul className="list-disc list-inside space-y-3 text-gray-700">
@@ -137,7 +137,7 @@ const pages = [
     </ul>
   </div>,
   <div className="p-6 bg-gray-50 rounded-lg shadow-md">
-    <h1 className="text-2xl font-bold text-[#065A38] mb-4">
+    <h1 className="text-2xl font-bold text-emerald-900 mb-4">
       Review and Submit
     </h1>
     <ul className="list-disc list-inside space-y-3 text-gray-700">
@@ -148,7 +148,7 @@ const pages = [
     </ul>
   </div>,
   <div className="p-6 bg-gray-50 rounded-lg shadow-md">
-    <h1 className="text-2xl font-bold text-[#065A38] mb-4">Payment Plan</h1>
+    <h1 className="text-2xl font-bold text-emerald-900 mb-4">Payment Plan</h1>
     <ul className="list-disc list-inside space-y-3 text-gray-700">
       <li>
         Choose your preferred payment plan: <strong>Annual, Quarterly,</strong>{" "}
@@ -181,10 +181,10 @@ const ApplicationProcess = () => {
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Collins Ngetich" />
       </Helmet>
-      <div className="flex justify-center items-center min-h-screen bg-[#065A38] pt-4 pb-4 px-2">
+      <div className="flex justify-center items-center min-h-screen bg-gradient-to-b from-emerald-950 via-emerald-900 to-emerald-950 pt-4 pb-4 px-2">
         <div className="w-11/12 max-w-4xl bg-white rounded-lg shadow-xl p-6 relative overflow-hidden mb-16 md:w-3/4">
           <header>
-            <h1 className="text-[#065A38] text-center text-2xl font-bold mb-6">
+            <h1 className="text-emerald-900 text-center text-2xl font-bold mb-6">
               UBP Application Process
             </h1>
           </header>
@@ -209,7 +209,7 @@ const ApplicationProcess = () => {
             <button
               onClick={handleBack}
               disabled={activeStep === 0}
-              className="btn bg-[#FBCC1A] text-[#065A38] disabled:opacity-50 px-6 py-2 rounded-md shadow-md"
+              className="btn bg-[#EAB308] text-emerald-900 disabled:opacity-50 px-6 py-2 rounded-md shadow-md"
             >
               <ChevronLeft size={20} />
             </button>
@@ -217,13 +217,13 @@ const ApplicationProcess = () => {
               <button
                 onClick={handleNext}
                 disabled={activeStep === steps.length - 1}
-                className="btn bg-[#065A38] text-[#FBCC1A] disabled:opacity-50 px-6 py-2 rounded-md shadow-md mr-2"
+                className="btn bg-emerald-900 text-[#EAB308] disabled:opacity-50 px-6 py-2 rounded-md shadow-md mr-2"
               >
                 <ChevronRight size={20} />
               </button>
               <button
                 onClick={handleRestart}
-                className="btn bg-[#065A38] text-[#FBCC1A] px-6 py-2 rounded-md shadow-md"
+                className="btn bg-emerald-900 text-[#EAB308] px-6 py-2 rounded-md shadow-md"
               >
                 <RefreshCw size={20} />
               </button>
