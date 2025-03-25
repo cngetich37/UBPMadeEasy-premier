@@ -52,11 +52,11 @@ const Contact = () => {
         <meta name="description" content="Share your feedback anonymously. Contact us for inquiries, suggestions, or support." />
       </Helmet>
 
-      <main className="flex flex-col justify-center items-center min-h-screen bg-[#111827] p-6">
+      <main className="flex flex-col justify-center items-center min-h-screen bg-gradient-to-b from-emerald-950 via-emerald-900 to-emerald-950 p-6">
         <section className="w-full max-w-3xl bg-white p-8 rounded-2xl shadow-lg">
           <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <header className="text-center mb-6">
-              <h1 className="text-3xl font-bold text-[#111827]">Give Feedback</h1>
+              <h1 className="text-3xl font-bold text-emerald-900">Give Feedback</h1>
               <p className="text-gray-600">Your opinion matters to us.</p>
             </header>
 
@@ -78,7 +78,7 @@ const Contact = () => {
 
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
-                <label htmlFor="name" className="block text-[#111827] font-medium mb-2">
+                <label htmlFor="name" className="block text-emerald-900 font-medium mb-2">
                   Name <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -93,7 +93,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-[#111827] font-medium mb-2">
+                <label htmlFor="email" className="block text-emerald-900 font-medium mb-2">
                   Email <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -108,7 +108,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-[#111827] font-medium mb-2">
+                <label htmlFor="message" className="block text-emerald-900 font-medium mb-2">
                   Message <span className="text-red-500">*</span>
                 </label>
                 <textarea
@@ -127,7 +127,7 @@ const Contact = () => {
                 disabled={isSubmitting}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-full py-3 bg-[#111827] text-[#FFD700] font-semibold rounded-lg transition-all focus:outline-none focus:ring-4 focus:ring-[#FFD700]"
+                className="w-full py-3 bg-emerald-900 text-[#FFD700] font-semibold rounded-lg transition-all focus:outline-none focus:ring-4 focus:ring-[#FFD700]"
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
               </motion.button>

@@ -37,7 +37,7 @@ const Navbar = () => {
   }, [isOpen]);
 
   const menuItems = [
-    { href: "/guide", icon: <FaListAlt />, label: "Guide" },
+    { href: "/guide", icon: <FaListAlt />, label: "User Guide" },
     { href: "/ubp", icon: <LuSearch />, label: "Search UBP" },
     { href: "/advert", icon: <LiaSignSolid />, label: "Advert Formats" },
     { href: "/financeact", icon: <ImBooks />, label: "Finance Act" },
@@ -64,9 +64,9 @@ const Navbar = () => {
               <IoMdMenu />
             </button>
           )}
-          <Link to="/" className="flex items-center" title="UBP Jiji Home">
+          <Link to="/" className="flex items-center" title="UBP Made Easy Home">
             <img
-              className="rounded-full shadow-sm border-2 border-[#111827] w-10 h-10"
+              className="rounded-full shadow-sm border-2 border-emerald-900 w-10 h-10"
               src={customPic}
               alt="UBPMadeEasy Logo - Home"
               loading="lazy"
@@ -95,7 +95,7 @@ const Navbar = () => {
           <div className="flex flex-row items-center">
             <Link to="/" title="Go to Home">
               <img
-                className="w-10 h-10 rounded-full border-2 border-emerald-950 shadow-sm"
+                className="w-10 h-10 rounded-full border-2 border-emerald-900 shadow-sm"
                 src={customPic}
                 alt="UBPMadeEasy Sidebar Logo"
               />

@@ -97,12 +97,12 @@ const FinanceAct = () => {
         />
         <meta name="author" content="Collins Ngetich" />
       </Helmet>
-      <div className="flex justify-center items-center min-h-screen bg-gradient-to-b from-black via-gray-900 to-black pt-4 pb-4 pl-2">
+      <div className="flex justify-center items-center min-h-screen bg-gradient-to-b from-emerald-950 via-emerald-900 to-emerald-950 pt-4 pb-4 pl-2">
         <div className="flex justify-center w-full max-w-screen-5xl">
           <div className="bg-white md:mb-2 mt-6 md:w-3/4 w-full md:h-screen md:mt-2 md:ml-2 p-6 rounded-md shadow-md overflow-y-auto mr-2 mb-16">
             <div className="flex flex-col justify-center flex-1">
               <header>
-                <h1 className="text-2xl font-semibold text-center text-[#111827] mb-2">
+                <h1 className="text-2xl font-semibold text-center text-emerald-900 mb-2">
                   Finance Act 2023
                 </h1>
               </header>
@@ -117,13 +117,13 @@ const FinanceAct = () => {
                 />
                 {/* <button
                   onClick={exportToExcel}
-                  className="bg-[#111827] text-sm hover:bg-[#FFD700] hover:text-[#111827] text-[#FFD700] font-bold py-1 px-4 rounded-md mr-2"
+                  className="bg-[#111827] text-sm hover:bg-[#FFD700] hover:text-emerald-900 text-[#FFD700] font-bold py-1 px-4 rounded-md mr-2"
                 >
                   Export Excel
                 </button>
                 <button
                   onClick={exportToCSV}
-                  className="bg-[#111827] text-sm hover:bg-[#FFD700] hover:text-[#111827] text-[#FFD700] font-bold py-1 px-4 rounded-md"
+                  className="bg-[#111827] text-sm hover:bg-[#FFD700] hover:text-emerald-900 text-[#FFD700] font-bold py-1 px-4 rounded-md"
                 >
                   Export CSV
                 </button> */}
@@ -135,7 +135,7 @@ const FinanceAct = () => {
                     {loading ? (
                       <div className="flex items-center">
                         <span className="loading loading-spinner bg-[#FFD700] loading-lg mr-2" />
-                        <span className="text-[#111827] font-bold">
+                        <span className="text-emerald-900 font-bold">
                           Loading Finance Act...
                         </span>
                       </div>
@@ -143,7 +143,7 @@ const FinanceAct = () => {
                   </div>
 
                   <table className="w-full border-collapse border border-[#FFD700]">
-                    <thead className="sticky top-0 bg-[#111827]">
+                    <thead className="sticky top-0 bg-emerald-900">
                       <tr>
                         <th
                           className="px-6 py-3 text-left text-xs font-semibold text-[#FFD700] uppercase tracking-wider border-b-2 border-[#FFD700] transition-all duration-300 transform "
@@ -178,7 +178,7 @@ const FinanceAct = () => {
                       {filteredData.map((item) => (
                         <tr
                           key={item._id}
-                          className="text-[#111827] text-sm font-semibold border border-[#FFD700]"
+                          className="text-emerald-900 text-sm font-semibold border border-[#FFD700]"
                         >
                           <td className="border border-[#FFD700] p-2">
                             {item.subCategory}

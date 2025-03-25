@@ -60,7 +60,7 @@ const AdvertFormat = () => {
   };
 
   return (
-    <main className="bg-[#111827] min-h-screen flex flex-col items-center p-4">
+    <main className="bg-gradient-to-b from-emerald-950 via-emerald-900 to-emerald-950 min-h-screen flex flex-col items-center p-4">
       <Helmet>
         <title>Advert Formats - Browse advert formats</title>
         <meta
@@ -72,7 +72,7 @@ const AdvertFormat = () => {
 
       <section className="bg-white w-full md:w-3/4 lg:w-2/3 p-6 rounded-xl shadow-lg min-h-screen">
         <header>
-          <h1 className="text-3xl font-bold text-[#111827] mb-4 text-center">
+          <h1 className="text-3xl font-bold text-emerald-900 mb-4 text-center">
             Advert (Small Formats)
           </h1>
         </header>
@@ -101,7 +101,7 @@ const AdvertFormat = () => {
                     alt={item.imageDescription || "Advert Image"}
                     className="w-full h-48 object-cover cursor-pointer hover:scale-105 transition-transform duration-300"
                   />
-                  <figcaption className="absolute bottom-0 left-0 w-full bg-[#FFD700] bg-opacity-80 text-[#111827] p-2 text-center font-semibold truncate">
+                  <figcaption className="absolute bottom-0 left-0 w-full bg-[#FFD700] bg-opacity-80 text-emerald-900 p-2 text-center font-semibold truncate">
                     {item.imageDescription}
                   </figcaption>
                 </figure>

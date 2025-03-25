@@ -19,7 +19,7 @@ const Guide = () => {
       </Helmet>
 
       <main className="min-h-screen bg-gradient-to-b from-emerald-950 via-emerald-900 to-emerald-950 p-6 flex justify-center items-center">
-        <div className="w-full max-w-3xl bg-emerald-900 p-10 rounded-md border-4 border-yellow-500 shadow-xl shadow-yellow-500/50">
+        <div className="w-full max-w-3xl bg-emerald-900 p-10 rounded-md border-4 border-yellow-500 shadow-sm shadow-yellow-500/50">
           {/* Luxurious Header */}
           <header className="mb-10 text-center">
             <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">
@@ -54,7 +54,7 @@ const Guide = () => {
                 },
                 {
                   text: "Visit the ",
-                  link: { href: "https://www.nairobiservices.go.ke/", text: "NairobiPay Portal" },
+                  link: { href: "https://nairobiservices.go.ke/", text: "NairobiPay Portal" },
                   rest: " to apply for a Unified Business Permit."
                 },
                 {

@@ -5,7 +5,7 @@ const Footer = () => {
 
   return (
     <footer
-      className="bg-white text-[#111827] font-medium p-4 border-t-4 border-t-[#FFD700]"
+      className="bg-white text-emerald-900 font-medium p-4 border-t-4 border-t-[#FFD700]"
       role="contentinfo"
       aria-label="Footer section"
     >
