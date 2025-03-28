@@ -27,7 +27,7 @@ const Guide = () => {
             </h1>
             <div className="h-1 bg-gradient-to-r from-yellow-500 via-yellow-300 to-yellow-500 w-3/4 mx-auto mt-4 rounded-full"></div>
           </header>
-          
+
           {/* Luxurious Content Section */}
           <section
             aria-labelledby="instructions-title"
@@ -39,32 +39,36 @@ const Guide = () => {
             >
               Instructions
             </h2>
-            
+
             <div className="h-px bg-gradient-to-r from-transparent via-yellow-500 to-transparent mb-6"></div>
-            
+
             <ol className="space-y-6 text-lg text-emerald-900">
               {[
                 {
                   text: "Navigate to the ",
                   link: { to: "/ubp", text: "Search UBP" },
-                  rest: " page and select or type a business activity."
+                  rest: " page and select or type a business activity.",
                 },
                 {
-                  text: "Take note of the Industry, Business Category, Business Subcategory, and the selected Business Activity."
+                  text: "Take note of the Industry, Business Category, Business Subcategory, and Business Activity.",
+
                 },
                 {
-                  text: "Visit the ",
-                  link: { href: "https://nairobiservices.go.ke/", text: "NairobiPay Portal" },
-                  rest: " to apply for a Unified Business Permit."
+                  text: "Visit the NairobiPay Portal to apply for a Unified Business Permit.",
                 },
                 {
                   text: "On the NairobiPay Portal, go to the ",
-                  strongText: ["Services", "Business Licensing", "Unified Business Permit"],
-                  rest: "."
+                  strongText: [
+                    "Services",
+                    "➤",
+                    "Business Licensing",
+                    "➤",
+                    "Unified Business Permit .",
+                  ],
                 },
                 {
-                  text: "This app will be helpful on the Business Activity Information page during the Unified Business Permit application."
-                }
+                  text: "This app will be helpful on the NairobiPay Portal to select the correct Industry, Business Category, Business Subcategory, and Business Activity.",
+                },
               ].map((item, index) => (
                 <li key={index} className="flex items-start">
                   <span className="text-emerald-900 text-2xl mr-3">➤</span>
@@ -82,14 +86,18 @@ const Guide = () => {
                       </Link>
                     )}
                     {item.rest}
-                    {item.strongText && item.strongText.map((text, idx) => (
-                      <strong key={idx} className="text-emerald-900"> {text} </strong>
-                    ))}
+                    {item.strongText &&
+                      item.strongText.map((text, idx) => (
+                        <strong key={idx} className="text-emerald-900">
+                          {" "}
+                          {text}{" "}
+                        </strong>
+                      ))}
                   </span>
                 </li>
               ))}
             </ol>
-            
+
             <div className="h-px bg-gradient-to-r from-transparent via-yellow-500 to-transparent mt-8"></div>
           </section>
         </div>
