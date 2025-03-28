@@ -66,7 +66,7 @@ const Guide = () => {
                   ],
                 },
                 {
-                  text: "Use the Industry code, Business Category code, Business Subcategory code, and Business Activity code, you wrote down to select the right business activity on the business activity information page.",
+                  text: "Use the Industry code, Business Category code, Business Subcategory code, and Business Activity code that you wrote down to select the correct business activity on the Business Activity Information page.",
                 },
               ].map((item, index) => (
                 <li key={index} className="flex items-start">
