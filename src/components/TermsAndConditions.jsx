@@ -43,7 +43,7 @@ const TermsAndConditions = () => {
 
       <main className="flex justify-center items-center min-h-screen bg-gradient-to-b from-emerald-950 via-emerald-900 to-emerald-950 p-6">
         <div className="flex flex-col justify-center items-center w-full max-w-screen-lg mx-auto">
-          <div className="bg-white w-11/12 md:w-3/4 p-10 rounded-md shadow-2xl border-2 border-[#FFD700] overflow-y-auto mb-10">
+          <div className="bg-white w-11/12 md:w-3/4 p-4 rounded-md shadow-2xl border-2 border-[#FFD700] overflow-y-auto mb-10">
             <header className="mb-6 text-center">
               <h1 className="text-emerald-900 text-5xl font-extrabold drop-shadow-lg">
                 Terms & Conditions
