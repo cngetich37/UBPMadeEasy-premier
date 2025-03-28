@@ -45,13 +45,12 @@ const Guide = () => {
             <ol className="space-y-6 text-lg text-emerald-900">
               {[
                 {
-                  text: "Navigate to the ",
+                  text: "Go to the ",
                   link: { to: "/ubp", text: "Search UBP" },
-                  rest: " page and select or type a business activity.",
+                  rest: " page and select a business activity.",
                 },
                 {
-                  text: "Take note of the Industry, Business Category, Business Subcategory, and Business Activity.",
-
+                  text: "Write down the Industry code, Business Category code, Business Subcategory code, and Business Activity code.",
                 },
                 {
                   text: "Visit the NairobiPay Portal to apply for a Unified Business Permit.",
@@ -63,11 +62,11 @@ const Guide = () => {
                     "➤",
                     "Business Licensing",
                     "➤",
-                    "Unified Business Permit .",
+                    "Unified Business Permit.",
                   ],
                 },
                 {
-                  text: "This app will be helpful on the NairobiPay Portal to select the correct Industry, Business Category, Business Subcategory, and Business Activity.",
+                  text: "Use the Industry code, Business Category code, Business Subcategory code, and Business Activity code, you wrote down to select the right business activity on the business activity information page.",
                 },
               ].map((item, index) => (
                 <li key={index} className="flex items-start">
