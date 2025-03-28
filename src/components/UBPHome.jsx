@@ -35,7 +35,7 @@ const UBPHome = () => {
         <section className="mb-12 sm:mb-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Feature Card */}
-            {["Step-by-Step Guide", "UBP & Advert", "Email Support"].map((title, index) => (
+            {["Step-by-Step Guide", "UBP & Advert", "FAQ"].map((title, index) => (
               <motion.div
                 key={index}
                 className="bg-white/10 backdrop-blur-lg rounded-xl p-6 sm:p-8 border border-white/30 hover:border-[#FFD700]/50 transition-all duration-300 shadow-lg"
@@ -62,9 +62,9 @@ const UBPHome = () => {
                 </div>
                 <h3 className="text-xl font-bold text-[#FFD700] mb-3 text-center">{title}</h3>
                 <p className="text-white/80 text-sm sm:text-base text-center">
-                  {index === 0 && "Clear, easy-to-follow instructions that walk you through each part of the UBP application."}
+                  {index === 0 && "Simple, step-by-step instructions to guide you through the process."}
                   {index === 1 && "Search for unified business permit business activity and advert small format."}
-                  {index === 2 && "Get answers to your questions anytime with our email support."}
+                  {index === 2 && "Get answers to the frequently asked questions with the FAQ."}
                 </p>
               </motion.div>
             ))}
