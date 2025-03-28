@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import UBPHome from "./components/UBPHome";
@@ -14,6 +14,27 @@ import TermsAndConditions from "./components/TermsAndConditions";
 import ProtectedRoute from "./components/ProtectedRoute";
 import CombinedSearch from "./components/CombinedSearch";
 
+const exceptionLinks = [
+  "https://nairobi.go.ke/download/the-nairobi-city-county-finance-act2023/",
+  "https://www.nairobiservices.go.ke/",
+];
+
+const RedirectHandler = () => {
+  const location = useLocation();
+
+  // Check if the current path matches an exception
+  const matchingException = exceptionLinks.find((link) =>
+    location.pathname.includes(new URL(link).pathname)
+  );
+
+  if (matchingException) {
+    window.location.href = matchingException;
+    return null;
+  }
+
+  return <Navigate to="/terms" replace />;
+};
+
 const App = () => {
   return (
     <>
@@ -22,6 +43,7 @@ const App = () => {
         {/* Public Routes */}
         <Route path="/" element={<UBPHome />} />
         <Route path="/terms" element={<TermsAndConditions />} />
+
         {/* Protected Routes */}
         <Route element={<ProtectedRoute />}>
           <Route path="/financeact" element={<FinanceAct />} />
@@ -34,8 +56,8 @@ const App = () => {
           <Route path="/naics" element={<NaicsCode />} />
         </Route>
 
-        {/* Redirect unknown routes */}
-        <Route path="*" element={<Navigate to="/terms" replace />} />
+        {/* Redirect unknown routes, allowing exceptions */}
+        <Route path="*" element={<RedirectHandler />} />
       </Routes>
       <Footer />
     </>
