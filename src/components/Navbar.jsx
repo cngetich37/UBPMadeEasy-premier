@@ -8,7 +8,6 @@ import { LiaSignSolid } from "react-icons/lia";
 import { ImBooks } from "react-icons/im";
 import {
   FaMagic,
-  FaEnvelope,
   FaQuestionCircle,
   FaListAlt,
 } from "react-icons/fa";
@@ -42,7 +41,6 @@ const Navbar = () => {
     { href: "/ubp", icon: <LuSearch />, label: "Search UBP" },
     { href: "/advert", icon: <LiaSignSolid />, label: "Advert Formats" },
     { href: "/financeact", icon: <ImBooks />, label: "Finance Act" },
-    { href: "/contact", icon: <FaEnvelope />, label: "Contact Us" },
     { href: "/faqs", icon: <FaQuestionCircle />, label: "FAQ" }
   ];
 
