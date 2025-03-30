@@ -825,7 +825,7 @@ function CombinedSearch() {
       },
     });
 
-    const qrCodeURL = `https://ubpeasy.cnetechafrica.org/ubp?ubp=${encodeURIComponent(
+    const qrCodeURL = `https://ubpeasy.vercel.app/ubp?ubp=${encodeURIComponent(
       searchInput
     )}`;
     const qrCodeDataUrl = await QRCode.toDataURL(qrCodeURL, { width: 80 });
@@ -835,7 +835,7 @@ function CombinedSearch() {
 
     pdf.addImage(qrCodeDataUrl, "PNG", qrCodeX, qrCodeY, 80, 80);
 
-    pdf.save("UBPMadeEasy-UBP.pdf");
+    pdf.save("BusinessActivity.pdf");
   };
 
   // Advertisement PDF generation
@@ -951,7 +951,7 @@ function CombinedSearch() {
       },
     });
 
-    const qrCodeURL = `https://ubpeasy.cnetechafrica.org/advertsearch?advert=${encodeURIComponent(
+    const qrCodeURL = `https://ubpeasy.vercel.app/ubp?advert=${encodeURIComponent(
       advertSearchInput
     )}`;
     const qrCodeDataUrl = await QRCode.toDataURL(qrCodeURL, { width: 80 });
@@ -961,13 +961,13 @@ function CombinedSearch() {
 
     doc.addImage(qrCodeDataUrl, "PNG", qrCodeX, qrCodeY, 80, 80);
 
-    doc.save("UBPMadeEasy-Advert.pdf");
+    doc.save("Advert.pdf");
   };
 
   return (
     <>
       <Helmet>
-        <title>UBP Made Easy - Business & Advertisement Search</title>
+        <title>UBP Made Easy | Search UBP</title>
         <meta
           name="description"
           content="Search for business activities and advertisement information for the Unified Business Permit application process."
@@ -1004,7 +1004,7 @@ function CombinedSearch() {
                 }`}
                 onClick={() => setActiveTab("advertisement")}
               >
-                Advertisement
+                Advert
               </button>
             </div>
 

@@ -53,10 +53,10 @@ const Guide = () => {
                   text: "Write down the Industry code, Business Category code, Business Subcategory code, and Business Activity code.",
                 },
                 {
-                  text: "Visit the NairobiPay Portal to apply for a Unified Business Permit.",
+                  text: "Visit the NairobiPay portal to apply for a Unified Business Permit.",
                 },
                 {
-                  text: "On the NairobiPay Portal, go to the ",
+                  text: "On the NairobiPay portal, go to the ",
                   strongText: [
                     "Services",
                     "➤",
