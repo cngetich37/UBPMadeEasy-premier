@@ -77,57 +77,67 @@ const TermsAndConditions = () => {
                 experts for accurate legal and regulatory information.
               </p>
             </section>
-            {/* End of Disclaimer Section */}
 
             {/* Usage Terms Section */}
-            <h2
-              id="usage-title"
-              className="text-3xl font-bold text-emerald-900 mb-4"
-            >
+            <h2 className="text-3xl font-bold text-emerald-900 mb-4">
               Terms & Conditions
             </h2>
-            <section
-              aria-labelledby="usage-title"
-              className="bg-yellow-400 p-8 rounded-md shadow-lg"
-            >
+            <section className="bg-yellow-400 p-8 rounded-md shadow-lg">
               <ul className="text-emerald-900 text-lg font-medium list-disc list-inside space-y-4">
                 <li>
                   This software is free to use and does not require any
                   subscription or payment.
                 </li>
                 <li>
-                  This app should not be considered an alternative to using the{" "}
-                  <a
-                    href="https://www.nairobiservices.go.ke/"
-                    className="text-emerald-900 hover:text-[#A71D2D] font-bold underline"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    NairobiPay portal
-                  </a>{" "}
-                  but rather as a resource to aid in searching for business
-                  activities before making a Unified Business Permit
-                  application.
+                  This app is intended as an aid and should not replace the
+                  official NairobiPay portal.
                 </li>
                 <li>
-                  The information provided is for reference only and should not
-                  be considered legally binding.
+                  The information provided is for reference only and is not
+                  legally binding.
                 </li>
                 <li>
                   We do not guarantee the accuracy, completeness, or reliability
                   of the data presented.
                 </li>
                 <li>
-                  Users should independently verify information before making a
+                  Users should verify information independently before making a
                   Unified Business Permit application.
                 </li>
                 <li>
                   We are not liable for any losses or damages resulting from the
                   use of this software.
                 </li>
+                <li>
+                  Users are responsible for ensuring the accuracy of the data
+                  they input.
+                </li>
+                <li>
+                  This application does not store sensitive personal data, and
+                  users should be mindful of their inputs.
+                </li>
+                <li>
+                  External links are provided for convenience; we are not
+                  responsible for third-party content.
+                </li>
+                <li>
+                  We reserve the right to modify or discontinue any part of this
+                  software without prior notice.
+                </li>
+                <li>
+                  This software does not provide legal, financial, or business
+                  advice. Consult Unified Business Permit subject matter experts for guidance.
+                </li>
+                <li>
+                  We may terminate access to users who misuse or violate these
+                  terms.
+                </li>
+                <li>
+                  All disputes related to this software will be governed by the
+                  laws of the respective jurisdiction.
+                </li>
               </ul>
             </section>
-            {/* End of Usage Terms Section */}
 
             {/* Action Buttons */}
             <div className="flex justify-center space-x-6 mt-8">
@@ -144,7 +154,6 @@ const TermsAndConditions = () => {
                 Deny
               </button>
             </div>
-            {/* End of Action Buttons */}
           </div>
         </div>
       </main>

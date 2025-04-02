@@ -8,8 +8,6 @@ import AdvertFormat from "./components/AdvertFormat";
 import Guide from "./components/Guide";
 import FAQS from "./components/FAQs";
 import ApplicationProcess from "./components/ApplicationProcess";
-import Contact from "./components/Contact";
-import NaicsCode from "./components/NaicsCode";
 import TermsAndConditions from "./components/TermsAndConditions";
 import ProtectedRoute from "./components/ProtectedRoute";
 import CombinedSearch from "./components/CombinedSearch";
@@ -47,13 +45,11 @@ const App = () => {
         {/* Protected Routes */}
         <Route element={<ProtectedRoute />}>
           <Route path="/financeact" element={<FinanceAct />} />
-          <Route path="/contact" element={<Contact />} />
           <Route path="/faqs" element={<FAQS />} />
           <Route path="/ubp" element={<CombinedSearch />} />
           <Route path="/advert" element={<AdvertFormat />} />
           <Route path="/guide" element={<Guide />} />
           <Route path="/app" element={<ApplicationProcess />} />
-          <Route path="/naics" element={<NaicsCode />} />
         </Route>
 
         {/* Redirect unknown routes, allowing exceptions */}
