@@ -1,8 +1,6 @@
 import React from "react";
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
-
   return (
     <footer
       className="bg-white text-emerald-900 font-medium p-4 border-t-4 border-t-[#FFD700]"
@@ -10,8 +8,8 @@ const Footer = () => {
       aria-label="Footer section"
     >
       <div className="hidden md:flex justify-center">
-        <p className="text-center">
-          Copyright &copy; {currentYear} - All rights reserved
+        <p className="text-md text-center italic">
+          Serving Nairobians with dignity 
         </p>
       </div>
     </footer>

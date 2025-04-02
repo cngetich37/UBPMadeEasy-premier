@@ -58,7 +58,7 @@ const TermsAndConditions = () => {
               >
                 Disclaimer
               </h2>
-              <p className="text-emerald-900 text-lg font-medium bg-red-100 p-5 rounded-md shadow-md italic">
+              <p className="text-emerald-900 text-lg font-medium bg-red-200 p-5 rounded-md shadow-md italic">
                 <span className="font-semibold text-emerald-900">Notice:</span>{" "}
                 This software is provided free of charge and is intended as an
                 informational tool. Users should not rely on this system as an
