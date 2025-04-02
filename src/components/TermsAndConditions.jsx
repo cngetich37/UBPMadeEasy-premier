@@ -2,37 +2,53 @@ import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router-dom";
 
+const generateToken = () => {
+  const token = {
+    value: Math.random().toString(36).slice(2),
+    expiry: Date.now() + 2 * 60 * 60 * 1000, // 2 hours expiry
+  };
+  localStorage.setItem("authToken", JSON.stringify(token));
+};
+
+const handleAccept = (navigate) => {
+  generateToken();
+  navigate("/guide"); // Redirect to guide after accepting
+};
+
+const handleDeny = (navigate) => {
+  localStorage.removeItem("authToken");
+  navigate("/"); // Redirect to home if denied
+};
+
+const AuthCheck = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const checkToken = () => {
+      const token = JSON.parse(localStorage.getItem("authToken"));
+      if (!token || Date.now() > token.expiry) {
+        localStorage.removeItem("authToken");
+        navigate("/terms"); // Redirect to terms if token is missing/expired
+      }
+    };
+
+    checkToken(); // Check on mount
+
+    // Optional: Re-check token every minute
+    const interval = setInterval(checkToken, 60 * 1000);
+
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, [navigate]);
+
+  return null;
+};
+
 const TermsAndConditions = () => {
   const navigate = useNavigate();
 
-  const generateToken = () => {
-    const token = {
-      value: Math.random().toString(36).substr(2),
-      expiry: Date.now() + 8 * 60 * 60 * 1000, // 8 hours expiry
-    };
-    localStorage.setItem("authToken", JSON.stringify(token));
-  };
-
-  const handleAccept = () => {
-    generateToken();
-    navigate("/guide"); // Change to the desired route
-  };
-
-  const handleDeny = () => {
-    localStorage.removeItem("authToken");
-    navigate("/"); // Change to the desired route
-  };
-
-  useEffect(() => {
-    const token = JSON.parse(localStorage.getItem("authToken"));
-    if (!token || Date.now() > token.expiry) {
-      localStorage.removeItem("authToken");
-      navigate("/terms"); // Redirect to terms if token is missing or expired
-    }
-  }, [navigate]);
-
   return (
     <>
+      <AuthCheck /> {/* Ensures token validation runs */}
       <Helmet>
         <title>Terms & Conditions - UBPMadeEasy</title>
         <meta
@@ -40,7 +56,6 @@ const TermsAndConditions = () => {
           content="Review the terms and conditions for using the UBPGuide application."
         />
       </Helmet>
-
       <main className="flex justify-center items-center min-h-screen bg-gradient-to-b from-emerald-950 via-emerald-900 to-emerald-950 p-6">
         <div className="flex flex-col justify-center items-center w-full max-w-screen-lg mx-auto">
           <div className="bg-white w-11/12 md:w-3/4 p-4 rounded-md shadow-2xl border-2 border-[#FFD700] overflow-y-auto mb-10">
@@ -126,15 +141,16 @@ const TermsAndConditions = () => {
                 </li>
                 <li>
                   This software does not provide legal, financial, or business
-                  advice. Consult Unified Business Permit subject matter experts for guidance.
+                  advice. Consult Unified Business Permit subject matter experts
+                  for guidance.
                 </li>
                 <li>
                   We may terminate access to users who misuse or violate these
                   terms.
                 </li>
                 <li>
-                  All disputes related to this software will be governed by the
-                  laws of the respective jurisdiction.
+                  By using this software, you agree to these terms and
+                  conditions.
                 </li>
               </ul>
             </section>
@@ -142,13 +158,13 @@ const TermsAndConditions = () => {
             {/* Action Buttons */}
             <div className="flex justify-center space-x-6 mt-8">
               <button
-                onClick={handleAccept}
+                onClick={() => handleAccept(navigate)}
                 className="bg-emerald-900 text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-[#A71D2D] transition-all"
               >
                 Accept
               </button>
               <button
-                onClick={handleDeny}
+                onClick={() => handleDeny(navigate)}
                 className="bg-red-500 text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-[#111] transition-all"
               >
                 Deny
