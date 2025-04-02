@@ -8,7 +8,7 @@ const Footer = () => {
       aria-label="Footer section"
     >
       <div className="hidden md:flex justify-center">
-        <p className="text-md text-center italic">
+        <p className="text-xl text-center italic">
           Serving Nairobians with dignity 
         </p>
       </div>
