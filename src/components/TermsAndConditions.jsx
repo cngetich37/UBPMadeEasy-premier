@@ -69,11 +69,11 @@ const TermsAndConditions = () => {
             <section aria-labelledby="disclaimer-title" className="mb-6">
               <h2
                 id="disclaimer-title"
-                className="text-3xl font-bold text-emerald-900 mb-4"
+                className="text-lg font-bold text-emerald-900 mb-4"
               >
                 Disclaimer
               </h2>
-              <p className="text-emerald-900 text-lg font-medium bg-red-200 p-5 rounded-md shadow-md italic">
+              <p className="text-emerald-900 text-sm font-medium bg-red-200 p-5 rounded-md shadow-md italic">
                 <span className="font-semibold text-emerald-900">Notice:</span>{" "}
                 This software is provided free of charge and is intended as an
                 informational tool. Users should not rely on this system as an
@@ -94,11 +94,11 @@ const TermsAndConditions = () => {
             </section>
 
             {/* Usage Terms Section */}
-            <h2 className="text-3xl font-bold text-emerald-900 mb-4">
+            <h2 className="text-lg font-bold text-emerald-900 mb-4">
               Terms & Conditions
             </h2>
             <section className="bg-yellow-400 p-8 rounded-md shadow-lg">
-              <ul className="text-emerald-900 text-lg font-medium list-disc list-inside space-y-4">
+              <ul className="text-emerald-900 text-sm font-medium list-disc list-inside space-y-4">
                 <li>
                   This software is free to use and does not require any
                   subscription or payment.
