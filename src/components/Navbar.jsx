@@ -10,6 +10,7 @@ import {
   FaMagic,
   FaQuestionCircle,
   FaListAlt,
+  FaRobot
 } from "react-icons/fa";
 
 const Navbar = () => {
@@ -40,8 +41,10 @@ const Navbar = () => {
     { href: "/app", icon: <FaMagic />, label: "UBP Process" },
     { href: "/ubp", icon: <LuSearch />, label: "Search UBP" },
     { href: "/advert", icon: <LiaSignSolid />, label: "Advert Formats" },
+    { href: "/agent", icon: <FaRobot />, label: "UBP Agent" },
     { href: "/financeact", icon: <ImBooks />, label: "Finance Act" },
     { href: "/faqs", icon: <FaQuestionCircle />, label: "FAQ" }
+
   ];
 
   return (
