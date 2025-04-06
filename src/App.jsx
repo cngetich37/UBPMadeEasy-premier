@@ -3,7 +3,7 @@ import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import UBPHome from "./components/UBPHome";
-import FinanceAct from "./components/FinanceAct";
+// import FinanceAct from "./components/FinanceAct";
 import AdvertFormat from "./components/AdvertFormat";
 import Guide from "./components/Guide";
 import FAQS from "./components/FAQs";
@@ -45,7 +45,7 @@ const App = () => {
 
         {/* Protected Routes */}
         <Route element={<ProtectedRoute />}>
-          <Route path="/financeact" element={<FinanceAct />} />
+          {/* <Route path="/financeact" element={<FinanceAct />} /> */}
           <Route path="/faqs" element={<FAQS />} />
           <Route path="/ubp" element={<CombinedSearch />} />
           <Route path="/advert" element={<AdvertFormat />} />
