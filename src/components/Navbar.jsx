@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 import customPic from "/UBPMadeEasy.webp";
 import { LuSearch } from "react-icons/lu";
 import { LiaSignSolid } from "react-icons/lia";
-import { ImBooks } from "react-icons/im";
+// import { ImBooks } from "react-icons/im";
 import {
-  FaMagic,
+  // FaMagic,
   FaQuestionCircle,
   FaListAlt,
   FaRobot
