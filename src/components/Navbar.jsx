@@ -37,12 +37,12 @@ const Navbar = () => {
   }, [isOpen]);
 
   const menuItems = [
-    { href: "/guide", icon: <FaListAlt />, label: "User Guide" },
-    { href: "/app", icon: <FaMagic />, label: "UBP Process" },
+    // { href: "/guide", icon: <FaListAlt />, label: "User Guide" },
+    { href: "/app", icon: <FaListAlt />, label: "UBP Process" },
     { href: "/ubp", icon: <LuSearch />, label: "Search UBP" },
     { href: "/advert", icon: <LiaSignSolid />, label: "Advert Formats" },
     { href: "/agent", icon: <FaRobot />, label: "UBP Agent" },
-    { href: "/financeact", icon: <ImBooks />, label: "Finance Act" },
+    // { href: "/financeact", icon: <ImBooks />, label: "Finance Act" },
     { href: "/faqs", icon: <FaQuestionCircle />, label: "FAQ" }
 
   ];
@@ -56,7 +56,7 @@ const Navbar = () => {
         aria-label="Main Navigation"
       >
         <div className="flex items-center gap-3">
-          {location.pathname !== "/" && location.pathname !== "/terms" && (
+          {location.pathname !== "/" && location.pathname !== "/terms" && location.pathname !== "/guide" && (
             <button
               onClick={toggleDrawer}
               className="text-3xl text-emerald-900"

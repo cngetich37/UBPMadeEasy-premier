@@ -45,8 +45,8 @@ const Guide = () => {
             <ol className="space-y-6 text-lg text-emerald-900">
               {[
                 {
-                  text: "Go to the ",
-                  link: { to: "/ubp", text: "Search UBP" },
+                  text: "Go to the Search UBP",
+                  
                   rest: " page and select a business activity.",
                 },
                 {
@@ -68,6 +68,10 @@ const Guide = () => {
                 {
                   text: "Use the Industry code, Business Category code, Business Subcategory code, and Business Activity code that you wrote down to select the correct business activity on the Business Activity Information page.",
                 },
+                {
+                  text:"To proceed click ",
+                  link: { to: "/ubp", text: "Search UBP" },
+                }
               ].map((item, index) => (
                 <li key={index} className="flex items-start">
                   <span className="text-emerald-900 text-2xl mr-3">➤</span>
