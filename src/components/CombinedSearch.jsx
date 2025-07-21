@@ -45,6 +45,14 @@ function CombinedSearch() {
   const [advertisementCategory, setAdvertisementCategory] = useState("");
   const [length, setLength] = useState(1);
   const [width, setWidth] = useState(1);
+  const [numberOfSides, setNumberOfSides] = useState(1); // NEW STATE
+  const sideAdvertTypes = [
+    "Above Canopy",
+    "Under Canopy",
+    "Directional Signs",
+    "Billboard",
+    "Call In Adverts"
+  ];
   const [applicationFee, setApplicationFee] = useState("");
   const [firstThreeMetres, setFirstThreeMetres] = useState("");
   const [firstSquareMetres, setFirstSquareMetres] = useState("");
@@ -552,87 +560,103 @@ function CombinedSearch() {
 
   useEffect(() => {
     const advertDimension = length * width;
-    let totalFee = 0;
 
+    // Calculate Renewal Fee (licenceFee)
+    let renewalFee = 0;
     if (advertSearchInput === "Directional Signs") {
-      setLength(1);
-      setWidth(1);
-      setLicenceFee("10500");
-      totalFee = 10500;
-    } else {
-      setLicenceFee(0);
-
-      if (advertSearchInput === "Billboard") {
-        if (advertDimension < 3) {
-          setLicenceFee(0);
-        } else if (advertDimension > 3) {
-          const calculatedFee =
-            (advertDimension - 3) * extraSquareMetres + firstThreeMetres;
-          setLicenceFee(calculatedFee);
-          totalFee = calculatedFee;
-        } else {
-          setLicenceFee(firstThreeMetres);
-          totalFee = firstThreeMetres;
-        }
-      } else if (advertSearchInput === "Corporate Flags") {
-        setLength(1);
-        setWidth(1);
-        setLicenceFee(perEachperYear);
-        totalFee = perEachperYear;
-      } else if (advertSearchInput === "Canvas") {
-        setLength(1);
-        setWidth(1);
-        setLicenceFee(firstSquareMetres);
-        totalFee = firstSquareMetres;
-      } else if (advertSearchInput === "Business Encroachment") {
-        if (advertDimension === 1) {
-          setLength(1);
-          setWidth(1);
-          setLicenceFee(firstSquareMetres);
-          totalFee = firstSquareMetres;
-        } else {
-          const calculatedFee =
-            (advertDimension - 1) * firstSquareMetres + firstSquareMetres;
-          setLicenceFee(calculatedFee);
-          totalFee = calculatedFee;
-        }
-      } else if (advertSearchInput === "Call In Adverts") {
-        setLength(1);
-        setWidth(1);
-        setLicenceFee("18200");
-        totalFee = 18200;
-      } else if (
-        advertSearchInput === "Wallpainting" ||
-        advertSearchInput === "Window Branding" ||
-        advertSearchInput === "Wall Branding"
-      ) {
-        if (advertDimension < 10) {
-          setLicenceFee(0);
-          totalFee = 0;
-        } else if (advertDimension === 10) {
-          setLicenceFee(firstTenSquareMetres);
-          totalFee = firstTenSquareMetres;
-        } else {
-          const calculatedFee =
-            (advertDimension - 10) * extraSquareMetres + firstTenSquareMetres;
-          setLicenceFee(calculatedFee);
-          totalFee = calculatedFee;
-        }
+      renewalFee = 10500;
+    } else if (advertSearchInput === "Billboard") {
+      if (advertDimension < 3) {
+        renewalFee = 0;
+      } else if (advertDimension > 3) {
+        renewalFee = (advertDimension - 3) * extraSquareMetres + firstThreeMetres;
       } else {
-        if (advertDimension === 1) {
-          setLicenceFee(firstSquareMetres);
-          totalFee = firstSquareMetres;
-        } else if (advertDimension > 1) {
-          const calculatedFee =
-            (advertDimension - 1) * extraSquareMetres + firstSquareMetres;
-          setLicenceFee(calculatedFee);
-          totalFee = calculatedFee;
-        }
+        renewalFee = firstThreeMetres;
+      }
+    } else if (advertSearchInput === "Corporate Flags") {
+      renewalFee = perEachperYear;
+    } else if (advertSearchInput === "Canvas") {
+      renewalFee = firstSquareMetres;
+    } else if (advertSearchInput === "Business Encroachment") {
+      if (advertDimension === 1) {
+        renewalFee = firstSquareMetres;
+      } else {
+        renewalFee = (advertDimension - 1) * firstSquareMetres + firstSquareMetres;
+      }
+    } else if (advertSearchInput === "Call In Adverts") {
+      renewalFee = 18200;
+    } else if (
+      advertSearchInput === "Wallpainting" ||
+      advertSearchInput === "Window Branding" ||
+      advertSearchInput === "Wall Branding"
+    ) {
+      if (advertDimension < 10) {
+        renewalFee = 0;
+      } else if (advertDimension === 10) {
+        renewalFee = firstTenSquareMetres;
+      } else {
+        renewalFee = (advertDimension - 10) * extraSquareMetres + firstTenSquareMetres;
+      }
+    } else {
+      if (advertDimension === 1) {
+        renewalFee = firstSquareMetres;
+      } else if (advertDimension > 1) {
+        renewalFee = (advertDimension - 1) * extraSquareMetres + firstSquareMetres;
       }
     }
+    if (sideAdvertTypes.includes(advertSearchInput)) {
+      renewalFee = (parseFloat(renewalFee) || 0) * (numberOfSides || 1);
+    }
+    setLicenceFee(renewalFee);
 
-    totalFee += applicationFee;
-    setLicenceFeeN(totalFee);
+    // Calculate New Applicant Fee (licenceFeeN)
+    let newApplicantFee = 0;
+    if (advertSearchInput === "Directional Signs") {
+      newApplicantFee = 10500;
+    } else if (advertSearchInput === "Billboard") {
+      if (advertDimension < 3) {
+        newApplicantFee = 0;
+      } else if (advertDimension > 3) {
+        newApplicantFee = (advertDimension - 3) * extraSquareMetres + firstThreeMetres;
+      } else {
+        newApplicantFee = firstThreeMetres;
+      }
+    } else if (advertSearchInput === "Corporate Flags") {
+      newApplicantFee = perEachperYear;
+    } else if (advertSearchInput === "Canvas") {
+      newApplicantFee = firstSquareMetres;
+    } else if (advertSearchInput === "Business Encroachment") {
+      if (advertDimension === 1) {
+        newApplicantFee = firstSquareMetres;
+      } else {
+        newApplicantFee = (advertDimension - 1) * firstSquareMetres + firstSquareMetres;
+      }
+    } else if (advertSearchInput === "Call In Adverts") {
+      newApplicantFee = 18200;
+    } else if (
+      advertSearchInput === "Wallpainting" ||
+      advertSearchInput === "Window Branding" ||
+      advertSearchInput === "Wall Branding"
+    ) {
+      if (advertDimension < 10) {
+        newApplicantFee = 0;
+      } else if (advertDimension === 10) {
+        newApplicantFee = firstTenSquareMetres;
+      } else {
+        newApplicantFee = (advertDimension - 10) * extraSquareMetres + firstTenSquareMetres;
+      }
+    } else {
+      if (advertDimension === 1) {
+        newApplicantFee = firstSquareMetres;
+      } else if (advertDimension > 1) {
+        newApplicantFee = (advertDimension - 1) * extraSquareMetres + firstSquareMetres;
+      }
+    }
+    newApplicantFee += applicationFee;
+    if (sideAdvertTypes.includes(advertSearchInput)) {
+      newApplicantFee = (parseFloat(newApplicantFee) || 0) * (numberOfSides || 1);
+    }
+    setLicenceFeeN(newApplicantFee);
   }, [
     advertSearchInput,
     length,
@@ -643,6 +667,7 @@ function CombinedSearch() {
     perEachperYear,
     firstTenSquareMetres,
     applicationFee,
+    numberOfSides, // Add dependency
   ]);
 
   // Common functions
@@ -870,6 +895,7 @@ function CombinedSearch() {
       applicationFee: formatCurrency(applicationFee),
       advertisementCategory: advertisementCategory || "N/A",
       dimensions: `${length ? length : "N/A"} m × ${width ? width : "N/A"} m`,
+      numberOfSides: numberOfSides || 1,
       firstSquareMetres: formatCurrency(firstSquareMetres) || "N/A",
       extraSquareMetres: formatCurrency(extraSquareMetres) || "N/A",
       firstThreeMetres: formatCurrency(firstThreeMetres) || "N/A",
@@ -913,6 +939,7 @@ function CombinedSearch() {
       ["Advert", advertSearchInput || "N/A"],
       ["Application Fee (New Applicant)", pdfData.applicationFee],
       ["Dimensions (Length × Width)", pdfData.dimensions],
+      ["Number of Sides", pdfData.numberOfSides], // NEW ROW
       ["First m²", pdfData.firstSquareMetres],
       ["First 3m²", pdfData.firstThreeMetres],
       ["First 10m²", pdfData.firstTenSquareMetres],
@@ -964,6 +991,13 @@ function CombinedSearch() {
     doc.save("Advert.pdf");
   };
 
+  useEffect(() => {
+    // Reset numberOfSides to 1 if advert type does not require sides
+    if (!sideAdvertTypes.includes(advertSearchInput)) {
+      setNumberOfSides(1);
+    }
+  }, [advertSearchInput]);
+
   return (
     <>
       <Helmet>
@@ -985,26 +1019,30 @@ function CombinedSearch() {
             className="bg-white  border-4  border-yellow-500 shadow-lg shadow-yellow-500/30 md:mb-2 md:w-3/4 w-11/12 md:h-screen h-3/4 md:mt-2 md:ml-2 p-4 rounded-md overflow-y-auto mb-16"
           >
             {/* Tab Navigation */}
-            <div className="flex border-b border-[#FFD700] mb-6">
+            <div className="flex justify-center gap-x-2 border-b border-[#FFD700] mb-6">
               <button
-                className={`py-2 px-4 font-medium text-lg ${
-                  activeTab === "business"
-                    ? "text-emerald-900 border-b-2 border-GRAY-900"
-                    : "text-gray-500 hover:text-emerald-900"
-                }`}
+                className={`w-1/2 md:w-1/2 py-2 px-6 font-semibold text-lg rounded-t-md transition-all duration-200 focus:outline-none
+                  ${
+                    activeTab === "business"
+                      ? "bg-emerald-900 text-[#FFD700] border-b-4 border-[#FFD700] shadow-md"
+                      : "bg-white text-emerald-900 hover:bg-[#FFD700]/20 border-b-4 border-transparent"
+                  }
+                `}
                 onClick={() => setActiveTab("business")}
               >
-                Business Activity
+                Business Activity Information
               </button>
               <button
-                className={`py-2 px-4 font-medium text-lg ${
-                  activeTab === "advertisement"
-                    ? "text-emerald-900 border-b-2 border-GRAY-900"
-                    : "text-gray-500 hover:text-emerald-900"
-                }`}
+                className={`w-1/2 md:w-1/2 py-2 px-6 font-semibold text-lg rounded-t-md transition-all duration-200 focus:outline-none
+                  ${
+                    activeTab === "advertisement"
+                      ? "bg-emerald-900 text-[#FFD700] border-b-4 border-[#FFD700] shadow-md"
+                      : "bg-white text-emerald-900 hover:bg-[#FFD700]/20 border-b-4 border-transparent"
+                  }
+                `}
                 onClick={() => setActiveTab("advertisement")}
               >
-                Advert
+                Advert Calculator
               </button>
             </div>
 
@@ -1223,7 +1261,35 @@ function CombinedSearch() {
                 </div>
                 <div className="flex justify-end mt-4">
                   <button
-                    onClick={() => shareAsPDF(tableData)}
+                    onClick={() => {
+                      // Filter the data as in the table before generating PDF
+                      const filteredRows = tableData?.financeActs
+                        ?.filter((row) => {
+                          if (!filterValue) return true;
+                          const inputNumber = parseInt(filterValue);
+                          return (
+                            !isNaN(inputNumber) &&
+                            matchNumberRange(
+                              row.businessDescription,
+                              inputNumber
+                            )
+                          );
+                        })
+                        .reduce((uniqueRows, row) => {
+                          if (
+                            !uniqueRows.some(
+                              (uniqueRow) =>
+                                uniqueRow.businessDescription ===
+                                row.businessDescription
+                            )
+                          ) {
+                            uniqueRows.push(row);
+                          }
+                          return uniqueRows;
+                        }, []);
+                      // Call shareAsPDF with filteredRows
+                      shareAsPDF({ ...tableData, financeActs: filteredRows });
+                    }}
                     className="btn bg-emerald-900 mb-8  text-[#FFD700] font-semibold py-2 px-4 rounded-md"
                   >
                     Download PDF
@@ -1562,17 +1628,28 @@ function CombinedSearch() {
                       className="input input-bordered input-success bg-white text-black p-2 rounded-md"
                     />
                   </div>
-                  <div className="hidden">
-                    <label className="text-md text-emerald-900 font-medium">
-                      Per Year, Per Each
-                    </label>
-                    <input
-                      type="number"
-                      value={perEachperYear}
-                      readOnly
-                      className="input input-bordered input-success bg-white text-black p-2 rounded-md"
-                    />
-                  </div>
+                  {/* Number of Sides field only for certain advert types */}
+                  {sideAdvertTypes.includes(advertSearchInput) && (
+                    <div className="flex flex-col">
+                      <label className="text-md text-emerald-900 font-medium">
+                        Number of Sides
+                      </label>
+                      <input
+                        type="number"
+                        min={1}
+                        value={numberOfSides}
+                        onChange={(e) => {
+                          const value = parseInt(e.target.value);
+                          if (!isNaN(value) && value > 0) {
+                            setNumberOfSides(value);
+                          } else if (e.target.value === "") {
+                            setNumberOfSides("");
+                          }
+                        }}
+                        className="input input-success bg-white text-black p-2 rounded-md w-full"
+                      />
+                    </div>
+                  )}
                 </form>
                 <div className="text-emerald-900 mt-2 sm:mt-4 lg:mt-6 max-w-1/2 mx-auto">
                   <span className="font-bold">Important Note:</span> If the{" "}
@@ -1628,3 +1705,5 @@ function CombinedSearch() {
 }
 
 export default CombinedSearch;
+
+
