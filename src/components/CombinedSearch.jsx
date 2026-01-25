@@ -682,7 +682,7 @@ function CombinedSearch() {
       await axios.get(apiUrl);
       const response = await axios.get(apiUrl);
       setData(response.data);
-      console.log("UBPMadeEasy!");
+      console.log("BizPermit!");
     } catch (error) {
       console.error("Error refreshing data:", error);
     }
@@ -716,7 +716,7 @@ function CombinedSearch() {
       "F"
     );
 
-    const title = "UBPMadeEasy";
+    const title = "BizPermit";
     const titleX = pdf.internal.pageSize.getWidth() / 2;
     const titleY = 50;
 
@@ -884,10 +884,10 @@ function CombinedSearch() {
     const formatCurrency = (amount) => {
       return amount !== 0
         ? parseFloat(amount).toLocaleString("en-KE", {
-            style: "currency",
-            currency: "KES",
-            minimumFractionDigits: 2,
-          })
+          style: "currency",
+          currency: "KES",
+          minimumFractionDigits: 2,
+        })
         : "";
     };
 
@@ -1022,10 +1022,9 @@ function CombinedSearch() {
             <div className="flex justify-center gap-x-2 border-b border-[#FFD700] mb-6">
               <button
                 className={`w-1/2 md:w-1/2 py-2 px-6 font-semibold text-lg rounded-t-md transition-all duration-200 focus:outline-none
-                  ${
-                    activeTab === "business"
-                      ? "bg-emerald-900 text-[#FFD700] border-b-4 border-[#FFD700] shadow-md"
-                      : "bg-white text-emerald-900 hover:bg-[#FFD700]/20 border-b-4 border-transparent"
+                  ${activeTab === "business"
+                    ? "bg-emerald-900 text-[#FFD700] border-b-4 border-[#FFD700] shadow-md"
+                    : "bg-white text-emerald-900 hover:bg-[#FFD700]/20 border-b-4 border-transparent"
                   }
                 `}
                 onClick={() => setActiveTab("business")}
@@ -1034,10 +1033,9 @@ function CombinedSearch() {
               </button>
               <button
                 className={`w-1/2 md:w-1/2 py-2 px-6 font-semibold text-lg rounded-t-md transition-all duration-200 focus:outline-none
-                  ${
-                    activeTab === "advertisement"
-                      ? "bg-emerald-900 text-[#FFD700] border-b-4 border-[#FFD700] shadow-md"
-                      : "bg-white text-emerald-900 hover:bg-[#FFD700]/20 border-b-4 border-transparent"
+                  ${activeTab === "advertisement"
+                    ? "bg-emerald-900 text-[#FFD700] border-b-4 border-[#FFD700] shadow-md"
+                    : "bg-white text-emerald-900 hover:bg-[#FFD700]/20 border-b-4 border-transparent"
                   }
                 `}
                 onClick={() => setActiveTab("advertisement")}
@@ -1234,10 +1232,10 @@ function CombinedSearch() {
                               >
                                 {!isNaN(parseInt(row[key]))
                                   ? parseInt(row[key]).toLocaleString("en-KE", {
-                                      style: "currency",
-                                      currency: "KES",
-                                      minimumFractionDigits: 2,
-                                    })
+                                    style: "currency",
+                                    currency: "KES",
+                                    minimumFractionDigits: 2,
+                                  })
                                   : "KES 0.00"}
                               </td>
                             ))}
@@ -1348,9 +1346,8 @@ function CombinedSearch() {
                     />
                   </div>
                   <div
-                    className={`flex flex-col ${
-                      applicationFee === 0 ? "hidden" : ""
-                    }`}
+                    className={`flex flex-col ${applicationFee === 0 ? "hidden" : ""
+                      }`}
                   >
                     <label className="text-md text-emerald-900 font-medium">
                       Application Fee(New Applicant)
@@ -1360,10 +1357,10 @@ function CombinedSearch() {
                       value={
                         !isNaN(parseFloat(applicationFee))
                           ? parseFloat(applicationFee).toLocaleString("en-KE", {
-                              style: "currency",
-                              currency: "KES",
-                              minimumFractionDigits: 2,
-                            })
+                            style: "currency",
+                            currency: "KES",
+                            minimumFractionDigits: 2,
+                          })
                           : ""
                       }
                       readOnly
@@ -1485,9 +1482,8 @@ function CombinedSearch() {
                   {advertSearchInput !== "" && (
                     <>
                       <div
-                        className={`flex flex-col ${
-                          firstSquareMetres === 0 ? "hidden" : ""
-                        }`}
+                        className={`flex flex-col ${firstSquareMetres === 0 ? "hidden" : ""
+                          }`}
                       >
                         <label className="text-md text-emerald-900 font-medium">
                           first m²
@@ -1497,13 +1493,13 @@ function CombinedSearch() {
                           value={
                             !isNaN(parseFloat(firstSquareMetres))
                               ? parseFloat(firstSquareMetres).toLocaleString(
-                                  "en-KE",
-                                  {
-                                    style: "currency",
-                                    currency: "KES",
-                                    minimumFractionDigits: 2,
-                                  }
-                                )
+                                "en-KE",
+                                {
+                                  style: "currency",
+                                  currency: "KES",
+                                  minimumFractionDigits: 2,
+                                }
+                              )
                               : ""
                           }
                           readOnly
@@ -1511,9 +1507,8 @@ function CombinedSearch() {
                         />
                       </div>
                       <div
-                        className={`flex flex-col ${
-                          extraSquareMetres === 0 ? "hidden" : ""
-                        }`}
+                        className={`flex flex-col ${extraSquareMetres === 0 ? "hidden" : ""
+                          }`}
                       >
                         <label className="text-md text-emerald-900 font-medium">
                           Each Extra m²
@@ -1523,13 +1518,13 @@ function CombinedSearch() {
                           value={
                             !isNaN(parseFloat(extraSquareMetres))
                               ? parseFloat(extraSquareMetres).toLocaleString(
-                                  "en-KE",
-                                  {
-                                    style: "currency",
-                                    currency: "KES",
-                                    minimumFractionDigits: 2,
-                                  }
-                                )
+                                "en-KE",
+                                {
+                                  style: "currency",
+                                  currency: "KES",
+                                  minimumFractionDigits: 2,
+                                }
+                              )
                               : ""
                           }
                           readOnly
@@ -1537,9 +1532,8 @@ function CombinedSearch() {
                         />
                       </div>
                       <div
-                        className={`flex flex-col ${
-                          firstThreeMetres === 0 ? "hidden" : ""
-                        }`}
+                        className={`flex flex-col ${firstThreeMetres === 0 ? "hidden" : ""
+                          }`}
                       >
                         <label className="text-md text-emerald-900 font-medium">
                           first 3m²
@@ -1549,13 +1543,13 @@ function CombinedSearch() {
                           value={
                             !isNaN(parseFloat(firstThreeMetres))
                               ? parseFloat(firstThreeMetres).toLocaleString(
-                                  "en-KE",
-                                  {
-                                    style: "currency",
-                                    currency: "KES",
-                                    minimumFractionDigits: 2,
-                                  }
-                                )
+                                "en-KE",
+                                {
+                                  style: "currency",
+                                  currency: "KES",
+                                  minimumFractionDigits: 2,
+                                }
+                              )
                               : ""
                           }
                           readOnly
@@ -1563,9 +1557,8 @@ function CombinedSearch() {
                         />
                       </div>
                       <div
-                        className={`flex flex-col ${
-                          firstTenSquareMetres === 0 ? "hidden" : ""
-                        }`}
+                        className={`flex flex-col ${firstTenSquareMetres === 0 ? "hidden" : ""
+                          }`}
                       >
                         <label className="text-md text-emerald-900 font-medium">
                           first 10m²
@@ -1575,13 +1568,13 @@ function CombinedSearch() {
                           value={
                             !isNaN(parseInt(firstTenSquareMetres))
                               ? parseInt(firstTenSquareMetres).toLocaleString(
-                                  "en-KE",
-                                  {
-                                    style: "currency",
-                                    currency: "KES",
-                                    minimumFractionDigits: 2,
-                                  }
-                                )
+                                "en-KE",
+                                {
+                                  style: "currency",
+                                  currency: "KES",
+                                  minimumFractionDigits: 2,
+                                }
+                              )
                               : ""
                           }
                           readOnly
@@ -1599,10 +1592,10 @@ function CombinedSearch() {
                       value={
                         !isNaN(parseInt(licenceFee))
                           ? parseInt(licenceFee).toLocaleString("en-KE", {
-                              style: "currency",
-                              currency: "KES",
-                              minimumFractionDigits: 2,
-                            })
+                            style: "currency",
+                            currency: "KES",
+                            minimumFractionDigits: 2,
+                          })
                           : "Ksh 0.00"
                       }
                       readOnly
@@ -1618,10 +1611,10 @@ function CombinedSearch() {
                       value={
                         !isNaN(parseInt(licenceFeeN))
                           ? parseInt(licenceFeeN).toLocaleString("en-KE", {
-                              style: "currency",
-                              currency: "KES",
-                              minimumFractionDigits: 2,
-                            })
+                            style: "currency",
+                            currency: "KES",
+                            minimumFractionDigits: 2,
+                          })
                           : "Ksh 0.00"
                       }
                       readOnly

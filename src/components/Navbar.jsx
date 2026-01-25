@@ -66,17 +66,16 @@ const Navbar = () => {
               <IoMdMenu />
             </button>
           )}
-          <Link to="/" className="flex items-center" title="UBP Made Easy Home">
+          <Link to="/" className="flex items-center" title="BizPermit Home">
             <img
               className="rounded-full shadow-sm border-2 border-emerald-900 w-10 h-10"
               src={customPic}
-              alt="UBPMadeEasy Logo - Home"
+              alt="BizPermit Logo - Home"
               loading="lazy"
             />
             <span className="font-bold text-xl ml-2">
-              <span className="text-emerald-900">UBP</span>
-              <span className="text-emerald-900">Made</span>
-              <span className="text-emerald-900">Easy</span>
+              <span className="text-emerald-900">Biz</span>
+              <span className="text-emerald-900">Permit</span>
             </span>
           </Link>
         </div>
@@ -99,14 +98,13 @@ const Navbar = () => {
               <img
                 className="w-10 h-10 rounded-full border-2 border-emerald-900 shadow-sm"
                 src={customPic}
-                alt="UBPMadeEasy Sidebar Logo"
+                alt="BizPermit Sidebar Logo"
               />
             </Link>
             <Link to="/" title="Go to Home">
               <span className="font-bold text-lg ml-1">
-                <span className="text-emerald-900">UBP</span>
-                <span className="text-emerald-900">Made</span>
-                <span className="text-emerald-900">Easy</span>
+                <span className="text-emerald-900">Biz</span>
+                <span className="text-emerald-900">Permit</span>
               </span>
             </Link>
           </div>

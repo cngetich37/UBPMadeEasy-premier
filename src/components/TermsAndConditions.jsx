@@ -50,10 +50,10 @@ const TermsAndConditions = () => {
     <>
       <AuthCheck /> {/* Ensures token validation runs */}
       <Helmet>
-        <title>Terms & Conditions - UBPMadeEasy</title>
+        <title>Terms & Conditions - BizPermit</title>
         <meta
           name="description"
-          content="Review the terms and conditions for using the UBPGuide application."
+          content="Review the terms and conditions for using the BizPermit application."
         />
       </Helmet>
       <main className="flex justify-center items-center min-h-screen bg-gradient-to-b from-emerald-950 via-emerald-900 to-emerald-950 p-6">

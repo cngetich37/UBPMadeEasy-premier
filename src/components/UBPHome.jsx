@@ -16,15 +16,14 @@ const UBPHome = () => {
         >
           <motion.img
             src={logo}
-            alt="UBP Logo"
+            alt="BizPermit Logo"
             className="w-24 sm:w-32 md:w-40 mx-auto mb-4 rounded-full border-4 border-[#FFD700] shadow-lg bg-white p-1"
             whileHover={{ rotate: 5, scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
           />
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-[#FFD700] mb-4 text-center">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFD700] to-[#FFEC8B]">
-              UBPMadeEasy
-            </span>
+            BizPermit
+
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl font-light max-w-2xl mx-auto text-center text-white/90 leading-relaxed">
             Your <span className="font-semibold text-[#FFD700]">simple</span> and <span className="font-semibold text-[#FFD700]">confident</span> guide through the UBP application process
@@ -93,7 +92,7 @@ const UBPHome = () => {
           </Link>
         </motion.section>
       </div>
-    </main>
+    </main >
   );
 };
 

@@ -6,7 +6,7 @@ const Guide = () => {
   return (
     <>
       <Helmet>
-        <title>User Guide - UBPGuide</title>
+        <title>User Guide - BizPermit</title>
         <meta
           name="description"
           content="Learn how to navigate the NairobiPay Portal and apply for a Unified Business Permit. Follow step-by-step guidance on business activity classification and permit application."
@@ -46,7 +46,7 @@ const Guide = () => {
               {[
                 {
                   text: "Go to the Search UBP",
-                  
+
                   rest: " page and select a business activity.",
                 },
                 {
@@ -69,7 +69,7 @@ const Guide = () => {
                   text: "Use the Industry code, Business Category code, Business Subcategory code, and Business Activity code that you wrote down to select the correct business activity on the Business Activity Information page.",
                 },
                 {
-                  text:"To proceed click ",
+                  text: "To proceed click ",
                   link: { to: "/ubp", text: "Search UBP" },
                 }
               ].map((item, index) => (

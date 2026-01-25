@@ -10,8 +10,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'logo.svg'],
       manifest: {
-        name: 'UBPMadeEasy',
-        short_name: 'UBPMadeEasy',
+        name: 'BizPermit',
+        short_name: 'BizPermit',
         start_url: '/',
         display: 'standalone',
         background_color: '#064E3B',
@@ -58,7 +58,7 @@ export default defineConfig({
             },
           },
           {
-            urlPattern: /^\/assets\/.*\.(png|jpg|jpeg|svg|gif|webp)$/, 
+            urlPattern: /^\/assets\/.*\.(png|jpg|jpeg|svg|gif|webp)$/,
             handler: 'CacheFirst',
             options: {
               cacheName: 'assets-images-cache',
@@ -72,7 +72,7 @@ export default defineConfig({
             },
           },
           {
-            urlPattern: /^\/public\/.*\.(png|jpg|jpeg|svg|gif|webp)$/, 
+            urlPattern: /^\/public\/.*\.(png|jpg|jpeg|svg|gif|webp)$/,
             handler: 'CacheFirst',
             options: {
               cacheName: 'public-images-cache',
